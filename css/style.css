@@ -583,7 +583,7 @@ footer > section{
 
 
 /* 모바일만 설정-테블릿은 안함-웹이 테블릿이랑 거의 같은사이즈 */
-@media(max-width:768px){
+@media(max-width:576px){
     .body{
         width: 99vw;
     }
@@ -593,12 +593,12 @@ footer > section{
         left: 0;
         top: 0;
         height: 45px;
-        width: 765px;
+        width: 575px;
         background-color: black;
         z-index: 999;
     }
     .header-sec1 > div{
-        width: 765px;
+        width: 575px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -626,7 +626,7 @@ footer > section{
     }
     
     .header-sec1 h1{
-        font-size: 38px;
+        font-size: 20px;
         font-weight: 700;
         line-height: 30px;
         user-select: none;
@@ -634,7 +634,7 @@ footer > section{
     }
     
     .header-sec1 p{
-        font-size: 20px;
+        font-size: 14px;
         user-select: none;
     }
     
@@ -681,13 +681,14 @@ footer > section{
     
     .selectstyle{
         display: none;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
         position: absolute;
-        left: 440px;
+        left: 410px;
         top: 45px;
-        width: 300px;
-        height: 60px;
+        width: 140px;
+        height: 120px;
         border-radius: 10px;
         z-index: 999;
     }
@@ -697,6 +698,7 @@ footer > section{
         padding: 5px;
         cursor: pointer;
     }
+
     aside > div > button{
         display: block;
         width: 130px;
@@ -704,8 +706,8 @@ footer > section{
     }
     
     aside > div > button > a{
-        font-size: 17px;
-        font-weight: 900;
+        font-size: 14px;
+        font-weight: 400;
     }
      
 
@@ -754,9 +756,9 @@ footer > section{
         position: absolute;
         left: 105%;
         top: -180%;
-        width: 230px;
+        width: 120px;
         height: 110px;
-        font-size: 19px;
+        font-size: 14px;
         border: 1px dashed white;
         padding: 8px;
     }
@@ -765,11 +767,11 @@ footer > section{
     
     
     main{
-        width: 765px;
+        width: 575px;
     }
     
     .maincss{
-        width: 765px;
+        width: 575px;
         margin: 0 auto;
         border-bottom: 1px solid white;
     }
@@ -781,16 +783,16 @@ footer > section{
     }
     
     .maincss > div > h1{
-        font-size: 45px;
+        font-size: 40px;
         padding-top: 240px;
         margin-bottom: 20px;
     }
     .maincss > div > h3{
-        font-size: 17px;
+        font-size: 12px;
         margin-top: 25px;
     }
     .maincss > div > h2, .main-sec1 > div > h2 > a{
-        font-size: 35px;
+        font-size: 25px;
         margin-top: 40px;
         margin-bottom: 30px;
     }
@@ -799,26 +801,26 @@ footer > section{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 765px;
+        width: 575px;
     }
 
     .main-sec1 > div > ul > li >div{
         display: none;
     }
     .main-sec1 > div > ul > li{
-        width: 250px;
+        width: 170px;
         height: 120px;
         background-color: rgb(235, 235, 235);
         border: 3px solid rgb(129, 129, 129);
     }
     
     .main-sec1 > div > ul > li > h3{
-        font-size: 20px;
+        font-size: 18px;
         color: #1A54F5;
         margin: 10px 0 5px 20px;
     }
     .main-sec1 > div > ul > li > p{
-        font-size: 14px;
+        font-size: 10px;
         font-weight: 900;
         color: #ef0bef;
         margin: 10px 0 5px 20px;
@@ -826,7 +828,7 @@ footer > section{
 
     .main-sec1 > div > h2:last-of-type{
         margin-top: 120px;
-        margin-left: -280px;
+        margin-left: -150px;
     }
     
     /* 글짜 자동색변경 관련 */
@@ -960,12 +962,12 @@ footer > section{
     /* swiper사이트에서 받아온 기능 */
   
     .main-sec2 > div > h1{
-        font-size: 70px;
+        font-size: 40px;
         margin-top: -200px;
     }
     
     .main-sec3 > div > h1{
-        font-size: 50px;
+        font-size: 32px;
         margin-top: -200px;  
     }
     .main-sec3 > div > h3{
@@ -980,14 +982,18 @@ footer > section{
         flex-wrap: wrap;        
     } 
     .main-sec3 > div:last-of-type > div > div > img{
-        width: 280px;
-        height: 280px;
+        width: 350px;
+        height: 350px;
         margin: 10px;
     }
 
     .main-sec4 > div > h1{
         margin-top: -180px;
     }
+    .main-sec4 > div > h3{
+        font-size: 20px;
+    }
+
 
     .main-sec5 > div > h1{
         font-size: 60px;
@@ -1018,7 +1024,7 @@ footer > section{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 765px;
+        width: 575px;
         margin: 0 auto;
         padding-bottom: 20px;
         margin-top: 20px;
@@ -1055,7 +1061,7 @@ footer > section{
     .table{
         border: 1px solid rgb(255, 255, 255);
         color: white;
-        width: 700px;
+        width: 575px;
         font-weight: 200;
         margin: 0;
     }
@@ -1090,7 +1096,7 @@ footer > section{
     .footer{
         display: flex;
         justify-content: space-between;
-        width: 765px;
+        width: 575px;
         margin-left : 30px;
         margin-right: 30px;
     }

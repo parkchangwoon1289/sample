@@ -1,0 +1,11 @@
+@font-face{
+    font-family: 'Noto Sans KR', Noto Sans KR;
+    src : url("../fonts/Noto_Sans_KR/static/NotoSansKR-Bold.ttf") format('opentype');
+    src : url("../fonts/Noto_Sans_KR/static/NotoSansKR-Light.ttf") format('opentype');
+    src : url("../fonts/Noto_Sans_KR/static/NotoSansKR-Medium.ttf") format('opentype');
+    src : url("../fonts/Noto_Sans_KR/static/NotoSansKR-Regular.ttf") format('opentype');
+}
+
+*{
+    font-family: 'Noto Sans KR', Noto Sans KR;
+}

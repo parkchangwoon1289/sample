@@ -3,7 +3,14 @@
 <head id="fullpage">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홍길동의 판매상품</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.apple.com">
+    <meta property="og:image" content="./images/pic1.jpg">
+    <!-- width: 400px; / height: 210px;사이즈의 사진이어야함 -->
+    <meta property="og:title" content="영업사원용 홈페이지 제작">
+    <meta property="og:description" content="매월 비용 X, 최저가 수준, 한번고객 영원히">
+    <!--og:description에 한글 18자 띄어쓰기 포함 25자정도 이하만 -->
+    <title>영업사원용 홈페이지 제작</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/font.css" />
         <!-- swiper 라이브러리 기능 -->
@@ -13,8 +20,6 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-    <!-- 카톡에 보낼때 보여지는 메인사진,홈페이지에는 표시X -->
-    <img class="firstpic" src="./images/pic1.jpg"/>
     <header>
         <section class="header-sec1">
             <div>
@@ -22,9 +27,9 @@
                     <p class="businesscard a12">Business card (on,off)
                         <div class="business a1">
                             <h6>COMPANY : &nbsp;&nbsp; 한국기업</h6>
-                            <h6>N&nbsp; A&nbsp; M &nbsp; E : &nbsp;&nbsp; 홍 길 동</h6>
-                            <h6>P H O N E&nbsp; : <a href="tel:01071161289">010-7116-1289</a></h6>
+                            <h6>N&nbsp; A&nbsp; M &nbsp; E : &nbsp;&nbsp; 홍 길 동</h6>                            
                             <h6>ADDRESS &nbsp; : &nbsp; 서울시 강남구 잠실동 11-11</h6>
+                            <h6>P H O N E&nbsp; : <a href="tel:01071161289">010-7116-1289</a></h6>
                         </div>
                     </p>
                     <div>
@@ -63,7 +68,7 @@
                                 </div>
                                 <div>
                                     <button>
-                                        <a href="./howto.html">의뢰방법,단가표</a>
+                                        <a href="./howto.html">의뢰방법</a>
                                     </button>
                                 </div>
                             </aside>
@@ -139,10 +144,9 @@
             </div>
             <div class="slideshow-container">
                 <div class="Slidesbackground">
-                    <div class="mySlidesB fade"><img src="./images/water1.jpg"/></div>
-                    <div class="mySlidesB fade"><img src="./images/water2.jpg"/></div>
-                    <div class="mySlidesB fade"><img src="./images/water3.jpg"/></div>
-                    <div class="mySlidesB fade"><img src="./images/water4.jpg"/></div>
+                    <div><img src="./images/water1.jpg"/></div>
+                    <div><img src="./images/water2.jpg"/></div>
+                    <div><img src="./images/water3.jpg"/></div>
                 </div>
             </div>
         </section>
@@ -217,7 +221,7 @@
 
                     <h4> 🛠 기 본 비 용 🛠</h4>
                     </br>
-                    <table class="table">
+                    <table class="table1">
                         <tr>
                             <thead>
                                 <tr>
@@ -236,12 +240,6 @@
                                 <td>위의 SAMPLE처럼 각종 그림 전환 효과나</br> 배치, 팝업효과등 코딩 가능</td>
                             </tr>
                             <tr>
-                                <th>고급형</br>(Advenced)</th>
-                                <th>30만원</th>
-                                <td>흰색배경의 페이지</br>나름대로 요즘 트렌드.</td>
-                                <td>위의 SAMPLE처럼 각종 그림 전환 효과나</br> 배치, 팝업효과등 코딩 가능</td>
-                            </tr>
-                            <tr>
                                 <th>다른형태</br>(Custom)</th>
                                 <th>협의</th>
                                 <td>제시되어 있는 형태와 완전히 다른 형태</td>
@@ -252,6 +250,34 @@
                                 <th>협의</th>
                                 <td>기본형, 고급형의 경우 1개 페이지내에서 정리</br>그러나 기업용은 페이지수가 많아 시간이 필요합니다</td>
                                 <td>원하시는 기능에 따라 다른 분야의 전문가와 협업도 해야할 수도 있지만 작업 가능합니다</td>
+                            </tr>
+                        </tbody>       
+                    </table>
+                    <table class="table2">
+                        <tr>
+                            <thead>
+                                <tr>
+                                    <th>종 류</th>
+                                    <th>금액</th>
+                                    <th>특 징</th>
+                                </tr>
+                            </thead>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <th>기본형</br>(Basic)</th>
+                                <th>20만원</th>
+                                <td>검은배경의 페이지</br>트렌드가 올드해도, 정보전달의 시인성은 훌륭함</td>
+                            </tr>
+                            <tr>
+                                <th>다른형태</br>(Custom)</th>
+                                <th>협의</th>
+                                <td>제시되어 있는 형태와 완전히 다른 형태</td>                                
+                            </tr>
+                            <tr>
+                                <th>기업의</br> 홈페이지</br>(Custom)</th>
+                                <th>협의</th>
+                                <td>기본형, 고급형의 경우 1개 페이지내에서 정리</br>그러나 기업용은 페이지수가 많아 시간이 필요합니다</td>                                
                             </tr>
                         </tbody>       
                     </table>

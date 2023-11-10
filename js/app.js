@@ -1,23 +1,23 @@
 // 명함 클릭시 나오게 하는 js
-const businesscard = document.querySelector(".businesscard");
-const business = document.querySelector(".business");
+const onoffbut = document.querySelector(".onoffbut");
+const business1 = document.querySelector(".business");
 
-businesscard.addEventListener("click", function(){
-    business.classList.toggle("a1"),
-    businesscard.classList.toggle("a12");
+onoffbut.addEventListener("click", function(){
+    onoffbut.classList.toggle("active1"),
+    business1.classList.toggle("active2")
 })
 // 명함 클릭시 나오게 하는 js
 
 
-// 스타일종류 클릭시 나오게 하는 js
-const button11 = document.querySelector(".button11");
-const selectstyle = document.querySelector(".selectstyle");
+// 리틀박스 클릭시 나오게 하는 js
+const boxbut = document.querySelector(".littleBox");
+const boxlist = document.querySelector(".boxlist");
 
-button11.addEventListener("click", function(){
-    selectstyle.classList.toggle("a11");
-    button11.classList.toggle("a12");
+boxbut.addEventListener("click", function(){
+    boxbut.classList.toggle("active1"),
+    boxlist.classList.toggle("active4")
 })
-// 스타일종류  클릭시 나오게 하는 js
+// 리틀박스 클릭시 나오게 하는 js
 
 
 // 자동 사진 넘김
@@ -29,7 +29,7 @@ var slideIndexA = 0;
         var slidesA = document.getElementsByClassName("mySlidesA");
        
         for (i = 0; i < slidesA.length; i++) {
-            slidesA[i].style.display = "none";
+            slidesA[i].style.display = "none"
         }
         slideIndexA++;
         if (slideIndexA > slidesA.length) {
@@ -58,19 +58,44 @@ const swiper = new Swiper(".my-swiper", {
     })
 //swiper 관련
 
+// 글자들의 자동 색 변경
+const changeA = document.querySelector(".business>a>h6>span");
+const changeB = document.querySelector(".main-sec1>h2:last-of-type");
+const changeC = document.querySelector(".main-sec1>h2:last-of-type>a");
+const changeE = document.querySelector(".footer>div:last-of-type>a:last-of-type");
+
+changeA.classList.toggle("active3");
+changeB.classList.toggle("active3");
+changeC.classList.toggle("active3");
+changeE.classList.toggle("active3");
+
+setInterval(()=>{
+    changeA.classList.toggle("active3"),
+    changeB.classList.toggle("active3"),
+    changeC.classList.toggle("active3"),
+    changeE.classList.toggle("active3")
+}, 1000)
+// 글자들의 자동 색 변경
 
 
+// 웹페이지에서 버튼 클릭시 해당 페이지로 자동으로 내려가기
+const but1 = document.querySelector(".button1");
+const but2 = document.querySelector(".button2");
+const but3 = document.querySelector(".button3");
+const buttop = document.querySelector(".gotop");
 
-// 버튼 클릭시 해당 페이지로 자동으로 내려가기
-let but1 = document.querySelector(".button1");
-let but2 = document.querySelector(".button2");
-let but3 = document.querySelector(".button3");
-let buttop = document.querySelector(".gotop>div");
+const littlebut1 = document.querySelector(".boxlist-1");
+const littlebut2 = document.querySelector(".boxlist-2");
+const littlebut3 = document.querySelector(".boxlist-3");
 
-let sec1 = document.querySelector(".main-sec1");
-let sec2 = document.querySelector(".main-sec2");
-let sec3 = document.querySelector(".main-sec6");
-let topp = document.querySelector(".header-sec1");
+const sec1 = document.querySelector(".fixed");
+const sec2 = document.querySelector(".main-sec2");
+const sec3 = document.querySelector(".main-sec6");
+const topp = document.querySelector(".header");
+
+const littlesec1 = document.querySelector(".onoffbut");
+const littlesec2 = document.querySelector(".main-sec2 > h1");
+const littlesec3 = document.querySelector(".main-sec6 >h3");
 
 but1.addEventListener("click", (event) => {
     event.preventDefault()
@@ -79,7 +104,7 @@ but1.addEventListener("click", (event) => {
 
 but2.addEventListener("click", (event) => {
     event.preventDefault()
-    window.scrollTo({ top: sec2.offsetTop+100, behavior: "smooth" })
+    window.scrollTo({ top: sec2.offsetTop, behavior: "smooth" })
 })
 
 but3.addEventListener("click", (event) => {
@@ -91,46 +116,24 @@ buttop.addEventListener("click", (event) => {
     event.preventDefault()
     window.scrollTo({ top: topp.offsetTop, behavior: "smooth" })
 })
-// 버튼 클릭시 해당 페이지로 자동으로 내려가기
 
+littlebut1.addEventListener("click", (event) => {
+    event.preventDefault()
+    window.scrollTo({ top: littlesec1.offsetTop, behavior: "smooth" })
+})
 
+littlebut2.addEventListener("click", (event) => {
+    event.preventDefault()
+    window.scrollTo({ top: littlesec2.offsetTop, behavior: "smooth" })
+})
 
-// 글자들의 자동 색 변경
-
-const changeB = document.querySelector(".main-sec1>div>h2:last-of-type");
-const changeC = document.querySelector(".main-sec1>div>h2:last-of-type>a");
-
-const changeE = document.querySelector(".footer>div:last-of-type>a:last-of-type");
-
-
-changeB.classList.toggle("active111");
-changeC.classList.toggle("active111");
-
-changeE.classList.toggle("active111");
-
-setInterval(()=>{
-
-    changeB.classList.toggle("active111"),
-    changeC.classList.toggle("active111"),
-
-    changeE.classList.toggle("active111")
-}, 1000)
-// 글자들의 자동 색 변경
+littlebut3.addEventListener("click", (event) => {
+    event.preventDefault()
+    window.scrollTo({ top: littlesec3.offsetTop-50, behavior: "smooth" })
+})
+// 웹페이지에서 버튼 클릭시 해당 페이지로 자동으로 내려가기
 
 
 
 
-//문단이 옆에서 나타나기
-const sections = document.querySelectorAll(".section");
 
-function scrollHandler(){
-    for(let i = 0;i < sections.length; i++){
-        if(sections[i].offsetTop - 900 <= window.pageYOffset){
-            sections[i].classList.add("active")
-        }
-    }
-}
-
-window.addEventListener("load", scrollHandler)
-window.addEventListener("scroll", scrollHandler)
-//문단이 옆에서 나타나기

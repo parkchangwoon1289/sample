@@ -32,15 +32,63 @@ header > section{
 .header > ul > li+li{
     margin-left: 30px;
 }
+.header > ul > li:nth-of-type(2) > ol{
+    transition: 0.5s;
+}
+.header > ul:hover > li:nth-of-type(2) > ol{
+    display: block;
+}
+.header > ul > li > a > p{
+    color: #858585;
+    transition: 0.3s;
+}
+.header > ul > li:hover > a > p{
+    color: white;
+}
+
+.submenu{
+    position: relative;
+
+}
+.submenu > ol{
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    display: none;
+}
+.submenu > ol > li{
+    width: 150px;
+    height: 40px;
+    color: #858585;
+    text-align: center;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px;
+    padding: 5px;
+}
+.submenu > ol > li+li{
+    margin-top: 5px;
+}
+.submenu > ol > li:hover{
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
 
 .onoffbut{
     position: relative;
-    border: 1px solid white;
-    padding: 5px;
+    border: 1px solid #858585;
+    color: #858585;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px;
     cursor: pointer;
+    padding: 5px;
     line-height: 30px;
     margin-left: 25px;
+}
+.onoffbut:hover{
+    color: white;
 }
 .business{
     position: absolute;
@@ -58,7 +106,7 @@ header > section{
     margin-left: 25px;
 }
 .business:hover{
-    border: 2px solid #75a66d;;
+    border: 2px solid #75a66d;
 }
 
 .business > a > h6{
@@ -81,20 +129,18 @@ header > section{
     margin-left: 70px;
     word-break: keep-all;
 }
-.header p{
+.header > ul > li > a > p{
     font-size: 20px;
-    color:#fff;
-    user-select: none;
-    word-break: keep-all;
+    padding-bottom: 10px;
 }
 
-.littleBox{
+.littleBox > div{
     display: none;
-    border: 3px solid white;
+    border: 3px solid #858585;
     border-radius: 10px;
     width: 40px;
     height: 40px;
-    margin-right: 25px;
+    margin-right: 10px;
     margin-left: 100px;
     position: relative;
     cursor: pointer;
@@ -102,22 +148,22 @@ header > section{
 .littleBox > div:after{
     content: "";
     position: absolute;
-    border-bottom: 3px solid white;
-    border-top: 3px solid white;
+    border-bottom: 3px solid #858585;
+    border-top: 3px solid #858585;
     width: 20px;
     height: 15px;
     left: 50%;
     top: 25%;
-    transform: translate(-50%,-2px);
+    transform: translate(-50%,-3px);
 }
 .littleBox > div:before{
     content: "";
     position: absolute;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid #858585;
     width: 20px;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-1px);
+    transform: translate(-50%,-3px);
 }
 .boxlist{
     display: none;
@@ -125,7 +171,6 @@ header > section{
     right: 0;
     top: 120%;
     width: 120px;
-    border: 1px solid white;
     background-color: black;
     border-radius: 10px;
     padding: 5px;
@@ -139,15 +184,12 @@ header > section{
     cursor: pointer;
     height: 35px;
     border: 1px solid white;
+    box-shadow: 5px 5px 5px;
     border-radius: 10px;
     cursor: pointer;
 }
 .boxlist > li+li{
     margin-top: 5px;
-}
-.boxlist>li:hover{
-    background-color: #3396ff;
-    transition: 0.3s;
 }
 
 .gotop > div{
@@ -444,7 +486,12 @@ footer{
 
 /* active 관련 시작 */
 .active1{
-    background-color: #3396ff;
+    color: white;
+    transition: 0.3s;
+}
+.active11{
+    background-color: white;
+    color: white;
     transition: 0.3s;
 }
 .active2{
@@ -583,32 +630,30 @@ footer{
 
 
 /* (360 / 390 / 428 /  683) */
-@media(max-width:683px){
+@media(max-width:768px){
     .body{
         width: 100vw;
     }
     .container{
-        width: 682px;
+        width: 767px;
     }
     
     .header > ul{
         display: none;
     }
-    .littleBox{
+    .littleBox > div{
         display: block;
     }
     .header h1{
         font-size: 4.2vw;
         margin: 0 0 10px 0;
     }
-    .fixed > p{
-        font-size: 17px;
-        line-height: 18px;
-        margin-left: 10px;
-    }
+
     .onoffbut{
         width: 120px;
         height: 50px;
+        font-size: 12px;
+        line-height: 16px;
         text-align: center;
     }
     .littleBox{
@@ -685,7 +730,7 @@ footer{
         margin-left: 0px;
     }
     .table1{
-        width: 580px;
+        width: 670px;
     }
 }
 

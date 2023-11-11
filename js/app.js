@@ -10,11 +10,11 @@ onoffbut.addEventListener("click", function(){
 
 
 // 리틀박스 클릭시 나오게 하는 js
-const boxbut = document.querySelector(".littleBox");
+const boxbut = document.querySelector(".littleBox > div");
 const boxlist = document.querySelector(".boxlist");
 
 boxbut.addEventListener("click", function(){
-    boxbut.classList.toggle("active1"),
+    boxbut.classList.toggle("active11"),
     boxlist.classList.toggle("active4")
 })
 // 리틀박스 클릭시 나오게 하는 js
@@ -88,48 +88,77 @@ const littlebut1 = document.querySelector(".boxlist-1");
 const littlebut2 = document.querySelector(".boxlist-2");
 const littlebut3 = document.querySelector(".boxlist-3");
 
-const sec1 = document.querySelector(".fixed");
-const sec2 = document.querySelector(".main-sec2");
-const sec3 = document.querySelector(".main-sec6");
+const subbut1 = document.querySelector(".submenu1");
+const subbut2 = document.querySelector(".submenu2");
+const subbut3 = document.querySelector(".submenu3");
+const subbut4 = document.querySelector(".submenu4");
+
+
+
+const but11 = document.querySelector(".fixed");
+const but22 = document.querySelector(".main-sec2");
+const but33 = document.querySelector(".main-sec6");
 const topp = document.querySelector(".header");
 
-const littlesec1 = document.querySelector(".onoffbut");
-const littlesec2 = document.querySelector(".main-sec2 > h1");
-const littlesec3 = document.querySelector(".main-sec6 >h3");
+const littlebut11 = document.querySelector(".onoffbut");
+const littlebut22 = document.querySelector(".main-sec2 > h1");
+const littlebut33 = document.querySelector(".main-sec6 >h3");
+
+const subbut11 = document.querySelector(".main-sec2");
+const subbut22 = document.querySelector(".main-sec3");
+const subbut33 = document.querySelector(".main-sec4");
+const subbut44 = document.querySelector(".main-sec5");
 
 but1.addEventListener("click", (event) => {
     event.preventDefault()
-    window.scrollTo({ top: sec1.offsetTop, behavior: "smooth" })
+    window.scrollTo({ top: but11.offsetTop, behavior: "smooth" })
 })
-
 but2.addEventListener("click", (event) => {
     event.preventDefault()
-    window.scrollTo({ top: sec2.offsetTop, behavior: "smooth" })
+    window.scrollTo({ top: but22.offsetTop, behavior: "smooth" })
 })
-
 but3.addEventListener("click", (event) => {
     event.preventDefault()
-    window.scrollTo({ top: sec3.offsetTop-50, behavior: "smooth" })
+    window.scrollTo({ top: but33.offsetTop-50, behavior: "smooth" })
 })
-
 buttop.addEventListener("click", (event) => {
     event.preventDefault()
     window.scrollTo({ top: topp.offsetTop, behavior: "smooth" })
 })
 
+
+
 littlebut1.addEventListener("click", (event) => {
     event.preventDefault()
-    window.scrollTo({ top: littlesec1.offsetTop, behavior: "smooth" })
+    window.scrollTo({ top: littlebut11.offsetTop, behavior: "smooth" })
 })
-
 littlebut2.addEventListener("click", (event) => {
     event.preventDefault()
-    window.scrollTo({ top: littlesec2.offsetTop, behavior: "smooth" })
+    window.scrollTo({ top: littlebut22.offsetTop, behavior: "smooth" })
 })
-
 littlebut3.addEventListener("click", (event) => {
     event.preventDefault()
-    window.scrollTo({ top: littlesec3.offsetTop-50, behavior: "smooth" })
+    window.scrollTo({ top: littlebut33.offsetTop-50, behavior: "smooth" })
+})
+
+
+
+
+subbut1.addEventListener("click", (event) => {
+    event.preventDefault()
+    window.scrollTo({ top: subbut11.offsetTop, behavior: "smooth" })
+})
+subbut2.addEventListener("click", (event) => {
+    event.preventDefault()
+    window.scrollTo({ top: subbut22.offsetTop, behavior: "smooth" })
+})
+subbut3.addEventListener("click", (event) => {
+    event.preventDefault()
+    window.scrollTo({ top: subbut33.offsetTop, behavior: "smooth" })
+})
+subbut4.addEventListener("click", (event) => {
+    event.preventDefault()
+    window.scrollTo({ top: subbut44.offsetTop, behavior: "smooth" })
 })
 // 웹페이지에서 버튼 클릭시 해당 페이지로 자동으로 내려가기
 

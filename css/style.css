@@ -85,14 +85,14 @@ header > section{
     cursor: pointer;
     padding: 5px;
     line-height: 30px;
-    margin-left: 25px;
+    margin-left: 10px;
 }
 .onoffbut:hover{
     color: white;
 }
 .business{
     position: absolute;
-    left: 0;
+    left: -1%;
     top: 100%;
     display: none;
     flex-direction: column;
@@ -122,11 +122,10 @@ header > section{
     font-weight: 600;
     margin-left: 15px;
 }
-.header h1{
+.headerh1{
     font-size: 28px;
     font-weight: 700;
     user-select: none;
-    margin-left: 70px;
     word-break: keep-all;
 }
 .header > ul > li > a > p{
@@ -141,7 +140,6 @@ header > section{
     width: 40px;
     height: 40px;
     margin-right: 10px;
-    margin-left: 100px;
     position: relative;
     cursor: pointer;
 }
@@ -192,7 +190,7 @@ header > section{
     margin-top: 5px;
 }
 
-.gotop > div{
+.gotop > div:first-of-type{
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -210,13 +208,30 @@ header > section{
     cursor: pointer;
     z-index: 999;
 }
-.gotop > div >div{
+.gotop > div:first-of-type > div{
     background: url('../icons/gototop.svg') no-repeat center / cover;
     width: 30px;
     height: 30px;
 }
-.gotop > div >p{
+.gotop > div > p{
     font-size: 20px;
+}
+.make{
+    position: fixed;
+    right: 68px;
+    bottom: 20px;
+    width: 200px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 999;
 }
 /* 헤더부분 끝 */
 
@@ -644,9 +659,8 @@ footer{
     .littleBox > div{
         display: block;
     }
-    .header h1{
-        font-size: 4.2vw;
-        margin: 0 0 10px 0;
+    .headerh1{
+        font-size: 24px;
     }
 
     .onoffbut{
@@ -741,12 +755,14 @@ footer{
     .container{
         width: 427px;
     }
-    .header h1{
+    .headerh1{
         font-size: 16px;
-        margin-left: 10px;
     }
     .littleBox{
         margin-left: 10px;
+    }
+    .littleBox > div{
+        margin: 0 10px 0 0;
     }
 
     .main-container > h1{
@@ -873,9 +889,8 @@ footer{
     .container{
         width: 389px;
     }
-    .header h1{
-        font-size: 15px;
-        margin-left: 5px;
+    .headerh1{
+        font-size: 16px;
     }
     .header p{
         font-size: 12px;
@@ -950,12 +965,8 @@ footer{
     .container{
         width: 359px;
     }
-    .header h1{
-        font-size: 15px;
-        margin-left: 5px;
-    }
-    .header p{
-        font-size: 10px;
+    .headerh1{
+        font-size: 14px;
     }
     .onoffbut{
         width: 90px;

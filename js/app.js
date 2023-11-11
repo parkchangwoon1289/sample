@@ -1,4 +1,4 @@
-// 명함 클릭시 나오게 하는 js
+// 명함 클릭시 명함 나오게 하는 js
 const onoffbut = document.querySelector(".onoffbut");
 const business1 = document.querySelector(".business");
 
@@ -6,10 +6,10 @@ onoffbut.addEventListener("click", function(){
     onoffbut.classList.toggle("active1"),
     business1.classList.toggle("active2")
 })
-// 명함 클릭시 나오게 하는 js
+// 명함 클릭시 명함 나오게 하는 js
 
 
-// 리틀박스 클릭시 나오게 하는 js
+// 리틀박스 클릭시 하위메뉴박스 토글로 나오게 하는 js
 const boxbut = document.querySelector(".littleBox > div");
 const boxlist = document.querySelector(".boxlist");
 
@@ -17,7 +17,25 @@ boxbut.addEventListener("click", function(){
     boxbut.classList.toggle("active11"),
     boxlist.classList.toggle("active4")
 })
-// 리틀박스 클릭시 나오게 하는 js
+// 리틀박스 클릭시 하위메뉴박스 토글로 나오게 하는 js
+
+
+// 리틀박스 메뉴 클릭시 리틀박스 사라지게 하는 js
+const boxbut11 = document.querySelector(".boxlist-1");
+const boxbut22 = document.querySelector(".boxlist-2");
+const boxbut33 = document.querySelector(".boxlist-3");
+const boxlist00 = document.querySelector(".boxlist");
+
+boxbut11.addEventListener("click", function(){
+    boxlist00.classList.remove("active4")
+})
+boxbut22.addEventListener("click", function(){
+    boxlist00.classList.remove("active4")
+})
+boxbut33.addEventListener("click", function(){
+    boxlist00.classList.remove("active4")
+})
+// 리틀박스 메뉴 클릭시 리틀박스 사라지게 하는 js
 
 
 // 자동 사진 넘김

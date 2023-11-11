@@ -581,24 +581,55 @@ footer{
 }
 /* 문단 옆에서 나타나기 관련 */
 
-@media(max-width:885px){
+
+/* (360 / 390 / 428 /  683) */
+@media(max-width:683px){
     .body{
         width: 100vw;
     }
     .container{
-        width: 880px;
+        width: 682px;
     }
+    
     .header > ul{
         display: none;
     }
-
     .littleBox{
         display: block;
+    }
+    .header h1{
+        font-size: 4.2vw;
+        margin: 0 0 10px 0;
+    }
+    .fixed > p{
+        font-size: 17px;
+        line-height: 18px;
+        margin-left: 10px;
+    }
+    .onoffbut{
+        width: 120px;
+        height: 50px;
+        text-align: center;
+    }
+    .littleBox{
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+    .business{
+        left: -2%;
+        top: 100%;
+        width: 330px;
+        height: 110px;
+    }
+    .business > a > h6{
+        font-size: 16px;
+        font-weight: 200;
+        margin-left: 15px;
     }
 
     .main-container{
         align-items: start;
-        margin-left: 15px;
+        margin-left: 10px;
     }
     .main-container > h1{
         font-size: 50px;
@@ -606,22 +637,35 @@ footer{
         margin-bottom: 30px;
     }
     .main-container > h3{
-        font-size: 25px;
+        font-size: 20px;
         margin-top: 10px;
     }
     .main-container > h2{
         font-size: 30px;
     }
     .main-sec1 > ul > li{
-        width: 270px;
-        height: 230px;
+        width: 220px;
+        height: 250px;
     }
     .phone:after{
-        width: 270px;
+        width: 260px;
         height: 50px;
         font-size: 14px;
     }
 
+    /* main-sec4의 그림크기조절 시작*/
+    .swiper{
+        width: 420px;
+        height: 420px;
+    }
+    .swiper-slide img{
+        width: 350px;
+        height: 350px;
+    }
+    /* main-sec4의 그림크기조절 끝*/ 
+    .main-sec5-pic{
+        flex-direction: column;
+    }
     .main-sec6 > div{
         border: 0mm solid #75a66d;
         padding: 15px;
@@ -641,87 +685,46 @@ footer{
         margin-left: 0px;
     }
     .table1{
-        border: 1px solid rgb(255, 255, 255);
-        color: white;
-        width: 750px;
-        font-weight: 300;
-        margin: 20px 0 0 50px;
-        word-break: keep-all;
+        width: 580px;
     }
 }
 
-@media(max-width:391px){
+@media(max-width:428px){
     .body{
         width: 100vw;
     }
     .container{
-        width: 390px;
+        width: 427px;
     }
-
     .header h1{
-        font-size: 4.2vw;
-        margin: 0;
-    }
-    .fixed > p{
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 16px;
         margin-left: 10px;
     }
-    .onoffbut{
-        display: block;
-        width: 100px;
-        height: 50px;
-        font-size: 9px;
-        border: 1px solid white;
-        cursor: pointer;
-        line-height: 30px;
-    }
     .littleBox{
-        margin-right: 10px;
-        margin-left: 3px;
-    }
-    .business{
-        left: -3%;
-        top: 100%;
-        width: 330px;
-        height: 110px;
-    }
-    .business > a > h6{
-
-        font-size: 16px;
-        font-weight: 200;
-        margin-left: 15px;
-    }
-    .business > a > h6 > span{
-        font-size: 18px;
-        text-decoration: underline;
-        text-decoration-thickness: 3px;
-        font-weight: 300;
-        margin-left: 15px;
+        margin-left: 10px;
     }
 
     .main-container > h1{
-        font-size: 30px;
+        font-size: 28px;
     }
     .main-container > h3{
-        font-size: 15px;
+        font-size: 16px;
     }
     .main-container > h2{
         font-size: 26px;
-        margin-bottom: 120px;
+        margin-bottom: 30px;
+    }
+    .main-container > h2:last-of-type{
+        margin-bottom: 100px;
     }
     .phone:after{
         left: -30%;
         top: 120%;
-        width: 230px;
-        height: 80px;
-        font-size: 15px;
-        border: 1px dashed white;
-        border-radius: 20px;
-        padding: 8px;
+        width: 260px;
+        height: 60px;
     }
     .main-sec1 > ul > li{
-        width: 120px;
+        width: 135px;
         height: 150px;
     }
     .main-sec1 > ul > li > h3{
@@ -732,42 +735,47 @@ footer{
         display: none;
     }
     .main-sec2{
-        justify-content: center;
-        align-items: center;
+        justify-content: start;
+        align-items: start;
     }
     .slideshow-container{
-        width: 360px;
-        height: 360px;
+        width: 380px;
+        height: 380px;
         margin: 0 auto;
         margin-bottom: 50px;
     }
     .mySlidesA{
-        width: 360px;
-        height: 360px;
+        width: 380px;
+        height: 380px;
     }
     .mySlidesA img{
+        width: 380px;
+        height: 380px;
+    }
+    .main-sec3-pic > div > img{
+        width: 380px;
+        height: 380px;
+        margin : 5px;
+    }
+    .swiper{
         width: 360px;
         height: 360px;
     }
-    .main-sec3-pic > div > img{
-        width: 250px;
-        height: 250px;
-        margin : 5px;
+    .swiper-slide img{
+        width: 280px;
+        height: 280px;
     }
     .main-sec5-pic{
         display: flex;
         flex-direction: column;
     }
     .main-sec5-pic > img{
-        width: 360px;
-        height: 360px;
+        width: 380px;
+        height: 380px;
     }
     .main-sec5-pic > video{
-        border: 1px solid white;
-        border-radius: 20px;
-        width: 360px;
-        height: 360px;
-        margin: 30px;
+        width: 380px;
+        height: 380px;
     }
 
     .main-sec6 > h3{
@@ -809,5 +817,131 @@ footer{
     .footer >div:last-of-type{
 
         padding-left: 5px;
+    }
+}
+
+/* (360 / 390 / 428 /  683) */
+@media(max-width:390px){
+    .body{
+        width: 100vw;
+    }
+    .container{
+        width: 389px;
+    }
+    .header h1{
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    .header p{
+        font-size: 12px;
+    }
+    .onoffbut{
+        width: 90px;
+        justify-content: center;
+        text-align: center;
+    }
+    .main-sec1 > ul > li{
+        width: 125px;
+        height: 150px;
+    }
+    .main-container > h1{
+        font-size: 24px;
+        padding-top: 100px;
+        margin-bottom: 20px;
+    }
+    .main-container > h3{
+        font-size: 14px;
+    }
+    .main-container > h2{
+        font-size: 24px;
+    }
+    .mySlidesA img{
+        width: 320px;
+        height: 320px;
+        margin-left: 10px;
+    }
+    .main-sec3-pic > div > img{
+        width: 320px;
+        height: 320px;
+        margin : 10px;
+    }
+    .swiper{
+        width: 320px;
+        height: 320px;
+    }
+    .swiper-slide img{
+        width: 250px;
+        height: 250px;
+    }
+    .main-sec5-pic > img{
+        width: 320px;
+        height:320px;
+        margin: 10px;
+    }
+    .main-sec5-pic > video{
+        width: 320px;
+        height:320px;
+        margin: 10px;
+    }
+    .table2{
+        width: 330px;
+        margin: 0;
+    }
+    .table2 td{
+        font-size: 14px;
+        padding: 5px;
+    }
+    .table2 th{
+        font-size: 16px;
+        padding: 5px;
+    }
+}
+
+/* (360 / 390 / 428 /  683) */
+@media(max-width:360px){
+    .body{
+        width: 100vw;
+    }
+    .container{
+        width: 359px;
+    }
+    .header h1{
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    .header p{
+        font-size: 10px;
+    }
+    .onoffbut{
+        width: 90px;
+        justify-content: center;
+        text-align: center;
+    }
+    .business{
+        left: -5%;
+        top: 110%;
+        width: 330px;
+    }
+    .main-sec1 > ul > li{
+        width: 115px;
+        height: 150px;
+    }
+    .phone:after{
+        left: -30%;
+        top: 120%;
+        width: 230px;
+        height: 60px;
+    }
+    .table2{
+        width: 320px;
+        margin: 0;
+    }
+    .table2 td{
+        font-size: 14px;
+        padding: 5px;
+    }
+    .table2 th{
+        font-size: 16px;
+        padding: 5px;
     }
 }

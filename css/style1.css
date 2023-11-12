@@ -46,42 +46,12 @@ header > section{
     color: white;
 }
 
-.submenu{
-    position: relative;
-
-}
-.submenu > ol{
-    position: absolute;
-    right: 0%;
-    top: 100%;
-    display: none;
-}
-.submenu > ol > li{
-    width: 150px;
-    height: 40px;
-    color: #858585;
-    text-align: center;
-    background-color: black;
-    border: 1px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px;
-    padding: 5px;
-}
-.submenu > ol > li+li{
-    margin-top: 5px;
-}
-.submenu > ol > li:hover{
-    color: white;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
 .onoffbut{
+    width: 190px;
     position: relative;
     border: 1px solid #858585;
     color: #858585;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px;
     cursor: pointer;
     padding: 5px;
     line-height: 30px;
@@ -89,6 +59,7 @@ header > section{
 }
 .onoffbut:hover{
     color: white;
+    border: 3px solid white;
 }
 .business{
     position: absolute;
@@ -123,7 +94,7 @@ header > section{
     margin-left: 15px;
 }
 .headerh1{
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     user-select: none;
     word-break: keep-all;
@@ -220,13 +191,13 @@ header > section{
     position: fixed;
     right: 68px;
     bottom: 20px;
-    width: 200px;
+    width: 120px;
     height: 50px;
-    border: 2px solid black;
+    border: 5px dashed red;
     border-radius: 10px;
     background-color: white;
     color: black;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 900;
     line-height: 40px;
     text-align: center;
@@ -356,14 +327,43 @@ header > section{
     margin-top: 100px;
 }
 
+/* 에시의 효과 관련 */
+.main-sec1 p{
+    font-size: 30px;
+    margin: 50px;
+}
+
+.act1{
+    color: red;
+}
+.act2{
+    color: transparent;
+}
+.act3{
+    width: max-content;
+    background-color: yellow;
+    color: black
+}
+.act4{
+    width: max-content;
+    transform: scale(1.5);
+}
+.act5{
+    padding-left: 50px;
+}
+
+
+
+
+/* 에시의 효과 관련 */
+
 
 footer{
+    border-top: 1px solid #858585;
     color: white;
-    padding: 50px 0;
+    padding: 50px 0 80px 80px;
 }
-.footer{
-    justify-content: space-around;
-}
+
 .footer h5{
     font-size: 18px;
     margin-bottom: 10px;
@@ -390,6 +390,7 @@ footer{
 /* active 관련 시작 */
 .active1{
     color: white;
+    border: 3px solid white;
     transition: 0.3s;
 }
 .active11{
@@ -414,123 +415,6 @@ footer{
 }
 /* active 관련 끝 */
 
-/* 자동사진 넘김관련 */
-.Slidesbackground {
-    margin: 0;
-    padding: 0;
-}
-.slideshow-image{
-    border-radius:3%;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.mySlidesA{
-    border-radius:3%;
-    width: 480px;
-    height: 480px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
-    margin: 20px;
-}
-.slideshow-container {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin: auto;
-}
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-/* 자동사진 넘김관련 */
-
-/* swiper사이트에서 받아온 기능 */
-.my-swiper{
-    width: 50%;
-    height: 100vh;
-}
-.swiper-slide{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 8vw;
-}
-.swiper{
-    width: 380px;
-    height: 380px;
-    border: 1mm solid white;
-    margin: 30px auto 30px;
-    border-radius: 20px;
-}
-.swiper-slide{
-    text-align: center;
-    font-size: 18px;
-    background: #020202;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.swiper-slide img{
-    display: block;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-}
-.swiper-pagination-bullet{
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    font-size: 12px;
-    color: white;
-    opacity: 1;
-    border: 1px solid ;
-    background: rgba(0, 0, 0, 0.2);
-}
-.swiper-pagination-bullet-active{
-    color: #fff;
-    background: #007aff;
-}
-.swiper-button-prev, .swiper-button-next{
-    color: red;
-    font-weight: 900;
-}
-/* swiper사이트에서 받아온 기능 */
-
-/* 문단 옆에서 나타나기 관련 */
-.section{
-    transition: 1s;
-    transform: translate(300px,400px);
-}
-.section h1{
-    transition: 05s;
-    opacity: 0;
-}
-.section p{
-    transition: 0.5s 1.0s;
-    opacity: 0;
-}
-.section.active h1,.section.active p{
-    transition: 0.3s 0.2s;
-    opacity: 1;
-}
-.section.active{
-    opacity: 1;
-    transform: translate(0,0);
-}
-/* 문단 옆에서 나타나기 관련 */
-
 
 /* (360 / 390 / 428 /  683) */
 @media(max-width:768px){
@@ -538,9 +422,11 @@ footer{
         width: 100vw;
     }
     .container{
-        width: 767px;
+        width: 720px;
+        max-width: 99%;
+        height: auto;
     }
-    
+       
     .header > ul{
         display: none;
     }
@@ -574,45 +460,34 @@ footer{
         margin-left: 15px;
     }
 
+    .main-sec1 h1{
+        font-size: 50px;
+        padding-top: 80px;
+        margin-bottom: 30px;
+    }
+    .main-sec1 h2{
+        font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-left: 10px;
+    }
+    .main-sec1 h3{
+        font-size: 15px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+    .main-sec1 p{
+        font-size: 20px;
+    }
+    img{
+        width: 650px;
+        height: auto;
+    }
     .main-container{
         align-items: start;
         margin-left: 10px;
     }
-    .main-container > h1{
-        font-size: 50px;
-        padding-top: 100px;
-        margin-bottom: 30px;
-    }
-    .main-container > h3{
-        font-size: 20px;
-        margin-top: 10px;
-    }
-    .main-container > h2{
-        font-size: 30px;
-    }
-    .main-sec1 > ul > li{
-        width: 220px;
-        height: 250px;
-    }
-    .phone:after{
-        width: 260px;
-        height: 50px;
-        font-size: 14px;
-    }
 
-    /* main-sec4의 그림크기조절 시작*/
-    .swiper{
-        width: 420px;
-        height: 420px;
-    }
-    .swiper-slide img{
-        width: 350px;
-        height: 350px;
-    }
-    /* main-sec4의 그림크기조절 끝*/ 
-    .main-sec5-pic{
-        flex-direction: column;
-    }
     .main-sec6 > div{
         border: 0mm solid #75a66d;
         padding: 15px;
@@ -653,80 +528,30 @@ footer{
         margin: 0 10px 0 0;
     }
 
-    .main-container > h1{
+    .main-sec1 h1{
         font-size: 28px;
-    }
-    .main-container > h3{
-        font-size: 16px;
-    }
-    .main-container > h2{
-        font-size: 26px;
+        padding-top: 80px;
         margin-bottom: 30px;
     }
-    .main-container > h2:last-of-type{
-        margin-bottom: 100px;
+    .main-sec1 h2{
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-left: 10px;
     }
-    .phone:after{
-        left: -30%;
-        top: 120%;
-        width: 260px;
-        height: 60px;
+    .main-sec1 h3{
+        font-size: 18px;
+        margin-top: 15px;
+        margin-left: 20px;
     }
-    .main-sec1 > ul > li{
-        width: 135px;
-        height: 150px;
+    .main-sec1 p{
+        font-size: 12px;
     }
-    .main-sec1 > ul > li > h3{
-        font-size: 20px;
-        margin: 10px 0 5px 10px;
+    img{
+        width: 400px;
+        height: auto;
     }
-    .main-sec1 > ul > li > p{
-        display: none;
-    }
-    .main-sec2{
-        justify-content: start;
-        align-items: start;
-    }
-    .slideshow-container{
-        width: 380px;
-        height: 380px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-    }
-    .mySlidesA{
-        width: 380px;
-        height: 380px;
-    }
-    .mySlidesA img{
-        width: 380px;
-        height: 380px;
-    }
-    .main-sec3-pic > div > img{
-        width: 380px;
-        height: 380px;
-        margin : 5px;
-    }
-    .swiper{
-        width: 360px;
-        height: 360px;
-    }
-    .swiper-slide img{
-        width: 280px;
-        height: 280px;
-    }
-    .main-sec5-pic{
-        display: flex;
-        flex-direction: column;
-    }
-    .main-sec5-pic > img{
-        width: 380px;
-        height: 380px;
-    }
-    .main-sec5-pic > video{
-        width: 380px;
-        height: 380px;
-    }
-
+    
     .main-sec6 > h3{
         font-size: 25px;
         margin: 30px 0;
@@ -784,52 +609,33 @@ footer{
         font-size: 12px;
     }
     .onoffbut{
-        width: 90px;
+        width: 100px;
         justify-content: center;
         text-align: center;
     }
-    .main-sec1 > ul > li{
-        width: 125px;
-        height: 150px;
+
+    .main-sec1 h1{
+        font-size: 25px;
+        padding-top: 80px;
+        margin-bottom: 30px;
     }
-    .main-container > h1{
-        font-size: 24px;
-        padding-top: 100px;
-        margin-bottom: 20px;
+    .main-sec1 h2{
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-left: 5px;
     }
-    .main-container > h3{
-        font-size: 14px;
-    }
-    .main-container > h2{
-        font-size: 24px;
-    }
-    .mySlidesA img{
-        width: 320px;
-        height: 320px;
+    .main-sec1 h3{
+        font-size: 15px;
+        margin-top: 15px;
         margin-left: 10px;
     }
-    .main-sec3-pic > div > img{
-        width: 320px;
-        height: 320px;
-        margin : 10px;
+    .main-sec1 p{
+        font-size: 10px;
     }
-    .swiper{
-        width: 320px;
-        height: 320px;
-    }
-    .swiper-slide img{
-        width: 250px;
-        height: 250px;
-    }
-    .main-sec5-pic > img{
-        width: 320px;
-        height:320px;
-        margin: 10px;
-    }
-    .main-sec5-pic > video{
-        width: 320px;
-        height:320px;
-        margin: 10px;
+    img{
+        width: 385px;
+        height: auto;
     }
     .table2{
         width: 330px;
@@ -854,10 +660,10 @@ footer{
         width: 359px;
     }
     .headerh1{
-        font-size: 14px;
+        font-size: 16px;
     }
     .onoffbut{
-        width: 90px;
+        width: 100px;
         justify-content: center;
         text-align: center;
     }
@@ -865,16 +671,6 @@ footer{
         left: -5%;
         top: 110%;
         width: 330px;
-    }
-    .main-sec1 > ul > li{
-        width: 115px;
-        height: 150px;
-    }
-    .phone:after{
-        left: -30%;
-        top: 120%;
-        width: 230px;
-        height: 60px;
     }
     .table2{
         width: 320px;
@@ -887,5 +683,23 @@ footer{
     .table2 th{
         font-size: 16px;
         padding: 5px;
+    }
+    .main-sec1 h2{
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-left: 5px;
+    }
+    .main-sec1 h3{
+        font-size: 15px;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+    .main-sec1 p{
+        font-size: 10px;
+    }
+    img{
+        width: 355px;
+        height: auto;
     }
 }

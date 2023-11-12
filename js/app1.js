@@ -27,10 +27,12 @@ const boxbut22 = document.querySelector(".boxlist-2");
 const boxlist00 = document.querySelector(".boxlist");
 
 boxbut11.addEventListener("click", function(){
-    boxlist00.classList.remove("active4")
+    boxlist00.classList.remove("active4"),
+    boxbut.classList.toggle("active11")
 })
 boxbut22.addEventListener("click", function(){
-    boxlist00.classList.remove("active4")
+    boxlist00.classList.remove("active4"),
+    boxbut.classList.toggle("active11")
 })
 // 리틀박스 메뉴 클릭시 리틀박스 사라지게 하는 js
 
@@ -73,15 +75,27 @@ boxbut22.addEventListener("click", function(){
 //     })
 // //swiper 관련
 
-// // 글자들의 자동 색 변경
-// const changeA = document.querySelector(".business>a>h6>span");
+// 글자들의 자동 색 변경
+const changeA = document.querySelector(".ex1");
+const changeB = document.querySelector(".ex2");
+const changeC = document.querySelector(".ex3");
+const changeD = document.querySelector(".ex4");
+const changeE = document.querySelector(".ex5");
 
-// changeA.classList.toggle("active3");
+changeA.classList.toggle("act1");
+changeB.classList.toggle("act2");
+changeC.classList.toggle("act3");
+changeD.classList.toggle("act4");
+changeE.classList.toggle("act5");
 
-// setInterval(()=>{
-//     changeA.classList.toggle("active3")
-// }, 1000)
-// // 글자들의 자동 색 변경
+setInterval(()=>{
+    changeA.classList.toggle("act1"),
+    changeB.classList.toggle("act2"),
+    changeC.classList.toggle("act3"),
+    changeD.classList.toggle("act4"),
+    changeE.classList.toggle("act5")
+}, 1000)
+// 글자들의 자동 색 변경
 
 
 // 웹페이지에서 버튼 클릭시 해당 페이지로 자동으로 내려가기
@@ -98,7 +112,7 @@ const but22 = document.querySelector(".main-sec1");
 const topp = document.querySelector(".header");
 
 const littlebut11 = document.querySelector(".main-sec6>div");
-const littlebut22 = document.querySelector(".main-sec1>h1");
+const littlebut22 = document.querySelector(".main-sec1>div");
 
 
 but1.addEventListener("click", (event) => {

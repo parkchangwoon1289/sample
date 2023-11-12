@@ -27,13 +27,16 @@ const boxbut33 = document.querySelector(".boxlist-3");
 const boxlist00 = document.querySelector(".boxlist");
 
 boxbut11.addEventListener("click", function(){
-    boxlist00.classList.remove("active4")
+    boxlist00.classList.remove("active4"),
+    boxbut.classList.toggle("active11")
 })
 boxbut22.addEventListener("click", function(){
-    boxlist00.classList.remove("active4")
+    boxlist00.classList.remove("active4"),
+    boxbut.classList.toggle("active11")
 })
 boxbut33.addEventListener("click", function(){
-    boxlist00.classList.remove("active4")
+    boxlist00.classList.remove("active4"),
+    boxbut.classList.toggle("active11")
 })
 // 리틀박스 메뉴 클릭시 리틀박스 사라지게 하는 js
 
@@ -98,7 +101,7 @@ setInterval(()=>{
 
 // 웹페이지에서 버튼 클릭시 해당 페이지로 자동으로 내려가기
 const but1 = document.querySelector(".button1");
-const but2 = document.querySelector(".button2");
+
 const but3 = document.querySelector(".button3");
 const buttop = document.querySelector(".gotop");
 
@@ -114,7 +117,7 @@ const subbut4 = document.querySelector(".submenu4");
 
 
 const but11 = document.querySelector(".fixed");
-const but22 = document.querySelector(".main-sec2");
+
 const but33 = document.querySelector(".main-sec6");
 const topp = document.querySelector(".header");
 
@@ -131,10 +134,7 @@ but1.addEventListener("click", (event) => {
     event.preventDefault()
     window.scrollTo({ top: but11.offsetTop, behavior: "smooth" })
 })
-but2.addEventListener("click", (event) => {
-    event.preventDefault()
-    window.scrollTo({ top: but22.offsetTop, behavior: "smooth" })
-})
+
 but3.addEventListener("click", (event) => {
     event.preventDefault()
     window.scrollTo({ top: but33.offsetTop-50, behavior: "smooth" })

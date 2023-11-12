@@ -23,7 +23,7 @@ header > section{
     transform: translate(-50%, 0);
     height: 50px;
     margin: 0 auto;
-    z-index: 999;
+    z-index: 998;
 }
 .header > ul{
     display: flex;
@@ -45,10 +45,12 @@ header > section{
 .header > ul > li:hover > a > p{
     color: white;
 }
+.header > ul:hover > li:nth-of-type(2){
+    cursor: pointer;
+}
 
 .submenu{
     position: relative;
-
 }
 .submenu > ol{
     position: absolute;
@@ -66,6 +68,7 @@ header > section{
     border-radius: 10px;
     box-shadow: 5px 5px 5px;
     padding: 5px;
+    font-size: 16px;
 }
 .submenu > ol > li+li{
     margin-top: 5px;
@@ -77,18 +80,21 @@ header > section{
 }
 
 .onoffbut{
-    position: relative;
-    border: 1px solid #858585;
+    width: 180px;
+    border: 3px solid #858585;
     color: #858585;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px;
     cursor: pointer;
     padding: 5px;
     line-height: 30px;
     margin-left: 10px;
+    font-size: 15px;
+    z-index: 999;
+
 }
 .onoffbut:hover{
     color: white;
+    border: 3px solid white;
 }
 .business{
     position: absolute;
@@ -118,12 +124,12 @@ header > section{
 .business > a > h6 > span{
     font-size: 22px;
     text-decoration: underline;
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 2px;
     font-weight: 600;
-    margin-left: 15px;
+    margin-left: 1.5rem;
 }
 .headerh1{
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     user-select: none;
     word-break: keep-all;
@@ -220,13 +226,13 @@ header > section{
     position: fixed;
     right: 68px;
     bottom: 20px;
-    width: 200px;
+    width: 120px;
     height: 50px;
-    border: 2px solid black;
+    border: 5px dashed red;
     border-radius: 10px;
     background-color: white;
     color: black;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 900;
     line-height: 40px;
     text-align: center;
@@ -241,7 +247,7 @@ header > section{
     position: relative;
 }
 .phone:after{
-    content: "스마트폰에서 클릭시 통화어플에 번호가 입력됩니다. business Card 클릭시 나오는 전화번호도 같습니다";
+    content: "스마트폰에서 클릭시 통화어플에 번호가 입력됩니다.business Card 클릭시 나오는 전화번호도 같습니다";
     position: absolute;
     left: 105%;
     top: -15%;
@@ -287,7 +293,7 @@ header > section{
 /* main section 1번 CSS 시작*/
 .main-sec1 > ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: inherit;
 }
@@ -470,12 +476,11 @@ header > section{
 
 
 footer{
+    border-top: 1px solid #858585;
     color: white;
-    padding: 50px 0;
+    padding: 50px 0 80px 80px;
 }
-.footer{
-    justify-content: space-around;
-}
+
 .footer h5{
     font-size: 18px;
     margin-bottom: 10px;
@@ -502,6 +507,7 @@ footer{
 /* active 관련 시작 */
 .active1{
     color: white;
+    border: 3px solid white;
     transition: 0.3s;
 }
 .active11{
@@ -620,47 +626,27 @@ footer{
 }
 /* swiper사이트에서 받아온 기능 */
 
-/* 문단 옆에서 나타나기 관련 */
-.section{
-    transition: 1s;
-    transform: translate(300px,400px);
-}
-.section h1{
-    transition: 05s;
-    opacity: 0;
-}
-.section p{
-    transition: 0.5s 1.0s;
-    opacity: 0;
-}
-.section.active h1,.section.active p{
-    transition: 0.3s 0.2s;
-    opacity: 1;
-}
-.section.active{
-    opacity: 1;
-    transform: translate(0,0);
-}
-/* 문단 옆에서 나타나기 관련 */
 
-
-/* (360 / 390 / 428 /  683) */
+/* (360 / 390 / 428 /  768) */
 @media(max-width:768px){
     .body{
         width: 100vw;
     }
     .container{
-        width: 767px;
+        width: 720px;
+        max-width: 99%;
+        height: auto;
     }
     
     .header > ul{
         display: none;
+
     }
     .littleBox > div{
         display: block;
     }
     .headerh1{
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .onoffbut{
@@ -703,9 +689,15 @@ footer{
         font-size: 30px;
     }
     .main-sec1 > ul > li{
-        width: 220px;
-        height: 250px;
+        width: 180px;
+        height: 220px;
     }
+    .main-sec1 > ul > li > h3{
+        font-size: 20px;
+    }
+    .main-sec1 > ul > li > p{
+        font-size: 16px;
+    }  
     .phone:after{
         width: 260px;
         height: 50px;
@@ -744,7 +736,7 @@ footer{
         margin-left: 0px;
     }
     .table1{
-        width: 670px;
+        width: 630px;
     }
 }
 
@@ -871,14 +863,6 @@ footer{
     .footer a{
         font-size: 12px;
     }
-    .footer >div:first-of-type{
-        border-right: 1px solid white;
-        padding-right: 10px;
-    }
-    .footer >div:last-of-type{
-
-        padding-left: 5px;
-    }
 }
 
 /* (360 / 390 / 428 /  683) */
@@ -896,7 +880,7 @@ footer{
         font-size: 12px;
     }
     .onoffbut{
-        width: 90px;
+        width: 100px;
         justify-content: center;
         text-align: center;
     }
@@ -966,10 +950,10 @@ footer{
         width: 359px;
     }
     .headerh1{
-        font-size: 14px;
+        font-size: 16px;
     }
     .onoffbut{
-        width: 90px;
+        width: 100px;
         justify-content: center;
         text-align: center;
     }

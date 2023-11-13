@@ -23,16 +23,115 @@ button{
     cursor: pointer;
 }
 
-h1,h2,h3,h4,h5,h6,p,a{
-    color: white;    
-}
-
-/* body{
-    background: url("../images/universe2.jpg") repeat center / contain;
-
-} */
-
 body{
     background-color: BLACK;
     overflow-x: auto;
+}
+
+/* 전체 공통 시작 */
+.container{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    background-color: black;
+}
+.container h3:last-of-type{
+    padding-bottom: 15px;
+}
+h1,h2,h3,h4,h5,h6,p,span,a{
+    color: white;
+    word-break: keep-all;
+}
+h1{
+    font-size: 4vw;
+    font-weight: 500;
+    padding-top: 80px;
+    margin-bottom: 20px;
+    color: #118eff;
+}
+h2{
+    font-size: 3vw;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #858585;
+}
+h3{
+    font-size: 2vw;
+    font-weight: 300;
+    margin-top: 8px;
+    color: #fee500;
+}
+h4{
+    font-size: 2.2vw;
+    font-weight: 300;
+    line-height: 60px;
+}
+h5{
+    font-size: 16px;
+    font-weight: 500;
+}
+h6{
+    font-size: 14px;
+    font-weight: 300;
+}
+p{
+    font-size: 18px;
+    font-weight: 200;
+}
+/* 전체 공통 끝 */
+
+
+@media(max-width:768px){ 
+    h1{
+        font-size: 4.5vw;
+        font-weight: 400;
+    }
+    h2{
+        font-size: 3.5vw;
+        font-weight: 300;
+    }
+    h3{
+        font-size: 2.5vw;
+        font-weight: 200;
+    }
+    .main-sec6 h4{
+        font-size: 16px;
+    }
+    .main-sec6 p{
+        font-size: 14px;
+    }
+}
+
+@media(max-width:428px){
+    h1{
+        font-size: 4.5vw;
+        font-weight: 400;
+    }
+    h2{
+        font-size: 5vw;
+        font-weight: 300;
+    }
+    h3{
+        font-size: 2.5vw;
+        font-weight: 200;
+    }
+}
+
+@media(max-width:390px){
+    h1{
+        font-size: 6.5vw;
+        font-weight: 400;
+    }
+    h2{
+        font-size: 5vw;
+        font-weight: 300;
+    }
+    h3{
+        font-size: 2.7vw;
+        font-weight: 200;
+    }
+}
+@media(max-width:360px){
+
 }

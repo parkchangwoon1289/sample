@@ -1,261 +1,18 @@
-/* 전체 공통 시작 */
-.container{
-    display: flex;
-    width: 1320px;
-    margin: 0 auto;
-    background-color: black;
-}
-h1,h2,h3,h4,h5,h6,p,span,a{
-    word-break: keep-all;
-}
-/* 전체 공통 끝 */
-
-/* 헤더부분시작 */
-header > section{
-    height: 70px;
-}
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
-    height: 50px;
-    margin: 0 auto;
-    z-index: 998;
-}
-.header > ul{
-    display: flex;
-    justify-content: space-between;
-}
-.header > ul > li+li{
-    margin-left: 30px;
-}
-.header > ul > li:nth-of-type(2) > ol{
-    transition: 0.5s;
-}
-.header > ul:hover > li:nth-of-type(2) > ol{
-    display: block;
-}
-.header > ul > li > a > p{
-    color: #858585;
-    transition: 0.3s;
-}
-.header > ul > li:hover > a > p{
-    color: white;
-}
-.header > ul:hover > li:nth-of-type(2){
-    cursor: pointer;
-}
-
-.submenu{
-    position: relative;
-}
-.submenu > ol{
-    position: absolute;
-    right: 0%;
-    top: 100%;
-    display: none;
-}
-.submenu > ol > li{
-    width: 150px;
-    height: 40px;
-    color: #858585;
-    text-align: center;
-    background-color: black;
-    border: 1px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px;
-    padding: 5px;
-    font-size: 16px;
-}
-.submenu > ol > li+li{
-    margin-top: 5px;
-}
-.submenu > ol > li:hover{
-    color: white;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.onoffbut{
-    width: 180px;
-    border: 3px solid #858585;
-    color: #858585;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 5px;
-    line-height: 30px;
-    margin-left: 10px;
-    font-size: 15px;
-    z-index: 999;
-
-}
-.onoffbut:hover{
-    color: white;
-    border: 3px solid white;
-}
-.business{
-    position: absolute;
-    left: -1%;
-    top: 100%;
-    display: none;
-    flex-direction: column;
-    width: 400px;
-    height: 120px;
-    padding: 10px;
-    border: 2px solid rgb(255, 108, 0);
-    background-color: #000;
-    border-radius: 10px;
-    z-index: 999;
-    margin-left: 25px;
-}
-.business:hover{
-    border: 2px solid #75a66d;
-}
-
-.business > a > h6{
-    color: #fff;
-    font-size: 18px;
-    font-weight: 300;
-    margin-left: 15px;
-}
-.business > a > h6 > span{
-    font-size: 22px;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    font-weight: 600;
-    margin-left: 1.5rem;
-}
-.headerh1{
-    font-size: 32px;
-    font-weight: 700;
-    user-select: none;
-    word-break: keep-all;
-}
-.header > ul > li > a > p{
-    font-size: 20px;
-    padding-bottom: 10px;
-}
-
-.littleBox > div{
-    display: none;
-    border: 3px solid #858585;
-    border-radius: 10px;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    position: relative;
-    cursor: pointer;
-}
-.littleBox > div:after{
-    content: "";
-    position: absolute;
-    border-bottom: 3px solid #858585;
-    border-top: 3px solid #858585;
-    width: 20px;
-    height: 15px;
-    left: 50%;
-    top: 25%;
-    transform: translate(-50%,-3px);
-}
-.littleBox > div:before{
-    content: "";
-    position: absolute;
-    border-bottom: 3px solid #858585;
-    width: 20px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-3px);
-}
-.boxlist{
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 120%;
-    width: 120px;
-    background-color: black;
-    border-radius: 10px;
-    padding: 5px;
-    z-index: 999;
-}
-.boxlist > li{
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    height: 35px;
-    border: 1px solid white;
-    box-shadow: 5px 5px 5px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.boxlist > li+li{
-    margin-top: 5px;
-}
-
-.gotop > div:first-of-type{
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    right: 20px;
-    bottom: 20px;
-    width: 50px;
-    height: 50px;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: white;
-    border: 2px solid black;
-    cursor: pointer;
-    z-index: 999;
-}
-.gotop > div:first-of-type > div{
-    background: url('../icons/gototop.svg') no-repeat center / cover;
-    width: 30px;
-    height: 30px;
-}
-.gotop > div > p{
-    font-size: 20px;
-}
-.make{
-    position: fixed;
-    right: 68px;
-    bottom: 20px;
-    width: 120px;
-    height: 50px;
-    border: 5px dashed red;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
-    font-size: 14px;
-    font-weight: 900;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    z-index: 999;
-}
-/* 헤더부분 끝 */
-
-
 /* 가상요소 관련 시작 (제작시 그냥 삭제) */
 .phone{
     position: relative;
 }
 .phone:after{
-    content: "스마트폰에서 클릭시 통화어플에 번호가 입력됩니다.business Card 클릭시 나오는 전화번호도 같습니다";
+    content: "터치시 통화어플에 번호를 입력하며 통화버튼 누를수 있게 전환됩니다. 화면 내 모든 전화번호는 다 같습니다";
     position: absolute;
     left: 105%;
     top: -15%;
-    width: 230px;
-    height: 80px;
-    font-size: 15px;
+    width: 22vw;
+    height: content;
+    font-size: 40%;
+    font-weight: 100;
     border: 1px dashed white;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 8px;
 }
 /* 가상요소 관련 끝 (제작시 그냥 삭제) */
@@ -265,6 +22,7 @@ header > section{
 /* main의 공통부분 시작*/
 .mainAll{
     border-bottom: 1px solid white;
+    padding-bottom: 50px;
 }
 .main-container{
     display: flex;
@@ -272,78 +30,71 @@ header > section{
     justify-content: center;
     align-items: center;
 }
-.main-container > h1{
-    font-size: 80px;
-    padding-top: 80px;
-    margin-bottom: 30px;
-}
-.main-container > h3{
-    font-size: 30px;
-    color: #3396ff;
-    margin-top: 10px;
-}
-.main-container > h2{
-    font-size: 50px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    color: #858585;
-}
 /* main의 공통부분 끝*/
 
 /* main section 1번 CSS 시작*/
 .main-sec1 > ul{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    width: inherit;
+    width: 90%;
 }
-/* introduce의 박스 3개 크기 */
+/* introduce의 박스 3개 시작 */
 .main-sec1 > ul > li{
-    width: 370px;
-    height: 200px;
+    width: 30%;
+    height: max-content;
     background-color: #161616;;
     border: 3px solid rgb(129, 129, 129);
     border-radius: 20px;
+    padding: 10px;
 }
-/* introduce의 박스 3개 크기 */
 
 .main-sec1 > ul > li > h3{
-    font-size: 24px;
+    font-size: 1.9vw;
+    font-weight: 300;
+    text-align: center;
     color: #3396ff;
-    margin: 10px 0 5px 20px;
 }
 .main-sec1 > ul > li > p{
-    font-size: 20px;
-    font-weight: 900;
+    font-size: 1.6vw;
+    font-weight: 300;
+    text-align: center;
     color: #75a66d;
-    margin: 10px 0 5px 20px;
+    margin-top: 10px;
 }
 .main-sec1 > ul > li > div{
     width: 50px;
     height: 50px;
-    margin: 15px 0 0 15px;
+    margin: 0 auto;
+    border: 1px solid #fee500;
+    border-radius: 10px;
 }
+/* introduce의 박스 3개 시작 */
 .main-sec1 > ul > li:nth-of-type(1) > div{
     background: url("../images/1-1.png") no-repeat center / cover;
-    background-color: rgb(235, 235, 235);
+    background-color: #118eff;;
 }
 .main-sec1 > ul > li:nth-of-type(2) > div{
     background: url("../images/1-2.png") no-repeat center / cover;
-    background-color: rgb(235, 235, 235);
+    background-color: #118eff;;
 }
 .main-sec1 > ul > li:nth-of-type(3) > div{
     background: url("../images/1-3.png") no-repeat center / cover;
-    background-color: rgb(235, 235, 235);
+    background-color: #118eff;;
 }
 /* main section 1번 CSS 끝*/
 
 
 /* main section 2번 css 시작 */
 .mySlidesA img{
-    width: 450px;
-    height: 450px;
+    width: 60vw;
+    height: 55vw;
+    max-width: 550px;
+    max-height: 500px;
     border: 1px solid white;
     border-radius: 20px;
+    margin-top: 20px;
+
 }
 /* main section 2번 CSS 끝*/
 
@@ -354,11 +105,12 @@ header > section{
     flex-wrap: wrap;
 }
 .main-sec3-pic > div > img{
-    width: 350px;
-    height: 350px;
+    width: 40vw;
+    height: 40vw;
+    max-width: 300px;
+    max-height: 300px;
     border: 1px solid white;
     border-radius: 20px;
-    margin : 30px;
 }
 /* main section 3번 CSS 끝*/
 
@@ -393,24 +145,19 @@ header > section{
     justify-content: center;
     margin: 50px auto;
 }
-
 .main-sec6 > div{
-    border: 1mm solid #75a66d;
     padding: 30px;
 }
 
-.main-sec6 > h3{
-    font-size: 50px;
+.main-sec6 > h1{
     text-align: center;
     margin: 30px 0;
 }
 .main-sec6 > div> h4{
     text-align: left;
-    font-size: 30px;
     margin: 20px 0 20px 40px;
 }
 .main-sec6 p{
-    font-size: 20px;
     text-align: left;
     line-height: 40px;
     margin-left: 80px;
@@ -422,7 +169,7 @@ header > section{
 .table1{
     border: 3px solid rgb(255, 255, 255);
     color: white;
-    width: 1110px;
+    width: 90%;
     font-weight: 300;
     margin: 20px 0 0 50px;
     word-break: keep-all;
@@ -449,7 +196,7 @@ header > section{
 .table2{
     border: 1px solid rgb(255, 255, 255);
     color: white;
-    width: 360px;
+    width: 90%;
     font-weight: 300;
     margin: 20px 0 0 5px;
     word-break: keep-all;
@@ -472,64 +219,27 @@ header > section{
 }
 /* main section 6번 CSS 끝*/
 
-
-
-
-footer{
-    border-top: 1px solid #858585;
-    color: white;
-    padding: 50px 0 80px 80px;
-}
-
-.footer h5{
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.footer p{
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.footer span{
-    display: inline-block;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-.footer a{
-    font-size: 14px;
-}
-
-
-
-
-
 /* active 관련 시작 */
 .active1{
-    color: white;
-    border: 3px solid white;
-    transition: 0.3s;
-}
-.active11{
     background-color: white;
-    color: white;
     transition: 0.3s;
 }
 .active2{
-    display: flex;
-    transition: 0.3s;
-}
-.active2:hover > h6 > a{
-    color: red;
-    transition: 0.3s;
-}
-.active3{
-    color: red;
-    transition: 0.3s;
-}
-.active4{
     display: block;
 }
+.active3{
+    display: none;
+}
+.active4{
+    color: red;
+    transition: 0.3s;
+}
+.active5{
+    color: #17b75e;
+    transition: 0.3s;
+}
+
+
 /* active 관련 끝 */
 
 /* 자동사진 넘김관련 */
@@ -545,13 +255,10 @@ footer{
 }
 .mySlidesA{
     border-radius:3%;
-    width: 480px;
-    height: 480px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
-    margin: 20px;
 }
 .slideshow-container {
     display: flex;
@@ -585,8 +292,10 @@ footer{
     font-size: 8vw;
 }
 .swiper{
-    width: 380px;
-    height: 380px;
+    width: 30vw;
+    height: 30vw;
+    min-width: 450px;
+    min-height: 450px;
     border: 1mm solid white;
     margin: 30px auto 30px;
     border-radius: 20px;
@@ -601,8 +310,10 @@ footer{
 }
 .swiper-slide img{
     display: block;
-    width: 300px;
-    height: 300px;
+    width: 25vw;
+    height: 25vw;
+    min-width: 380px;
+    min-height: 380px;
     object-fit: cover;
 }
 .swiper-pagination-bullet{
@@ -628,91 +339,27 @@ footer{
 
 
 /* (360 / 390 / 428 /  768) */
-@media(max-width:768px){
-    .body{
-        width: 100vw;
-    }
-    .container{
-        width: 720px;
-        max-width: 99%;
-        height: auto;
-    }
-    
-    .header > ul{
-        display: none;
-
-    }
-    .littleBox > div{
-        display: block;
-    }
-    .headerh1{
-        font-size: 22px;
-    }
-
-    .onoffbut{
-        width: 120px;
-        height: 50px;
-        font-size: 12px;
-        line-height: 16px;
-        text-align: center;
-    }
-    .littleBox{
-        margin-right: 10px;
-        margin-left: 5px;
-    }
-    .business{
-        left: -2%;
-        top: 100%;
-        width: 330px;
-        height: 110px;
-    }
-    .business > a > h6{
-        font-size: 16px;
-        font-weight: 200;
-        margin-left: 15px;
-    }
-
-    .main-container{
-        align-items: start;
-        margin-left: 10px;
-    }
-    .main-container > h1{
-        font-size: 50px;
-        padding-top: 100px;
-        margin-bottom: 30px;
-    }
-    .main-container > h3{
-        font-size: 20px;
-        margin-top: 10px;
-    }
-    .main-container > h2{
-        font-size: 30px;
-    }
-    .main-sec1 > ul > li{
-        width: 180px;
-        height: 220px;
-    }
-    .main-sec1 > ul > li > h3{
-        font-size: 20px;
-    }
-    .main-sec1 > ul > li > p{
-        font-size: 16px;
-    }  
-    .phone:after{
-        width: 260px;
-        height: 50px;
-        font-size: 14px;
-    }
-
+@media(max-width:768px){  
     /* main-sec4의 그림크기조절 시작*/
     .swiper{
-        width: 420px;
-        height: 420px;
+        width: 30vw;
+        height: 30vw;
+        min-width: 400px;
+        min-height: 400px;
     }
     .swiper-slide img{
-        width: 350px;
-        height: 350px;
+        width: 25vw;
+        height: 25vw;
+        min-width: 320px;
+        min-height: 320px;
     }
+
+    .main-sec3-pic > div > img{
+        width: 4200px;
+        height: 4200px;
+        margin : 10px;
+    }
+
     /* main-sec4의 그림크기조절 끝*/ 
     .main-sec5-pic{
         flex-direction: column;
@@ -727,97 +374,60 @@ footer{
         margin-left: 30px;
 
     }
-    .main-sec6 > div> h4{
-        font-size: 24px;
-        margin-left: 0px;
-    }
-    .main-sec6 p{
-        font-size: 20px;
-        margin-left: 0px;
-    }
+}
+
+@media(max-width:620px){
     .table1{
-        width: 630px;
+        display: none;
+    }
+    .table2{
+        display: block;
     }
 }
 
 @media(max-width:428px){
-    .body{
-        width: 100vw;
-    }
-    .container{
-        width: 427px;
-    }
-    .headerh1{
-        font-size: 16px;
-    }
-    .littleBox{
-        margin-left: 10px;
-    }
-    .littleBox > div{
-        margin: 0 10px 0 0;
-    }
-
-    .main-container > h1{
-        font-size: 28px;
-    }
-    .main-container > h3{
-        font-size: 16px;
-    }
-    .main-container > h2{
-        font-size: 26px;
-        margin-bottom: 30px;
-    }
-    .main-container > h2:last-of-type{
-        margin-bottom: 100px;
-    }
-    .phone:after{
-        left: -30%;
-        top: 120%;
-        width: 260px;
-        height: 60px;
-    }
-    .main-sec1 > ul > li{
-        width: 135px;
-        height: 150px;
-    }
-    .main-sec1 > ul > li > h3{
-        font-size: 20px;
-        margin: 10px 0 5px 10px;
-    }
-    .main-sec1 > ul > li > p{
-        display: none;
-    }
-    .main-sec2{
+    .main-container{
         justify-content: start;
         align-items: start;
+        padding-left: 10px;
     }
-    .slideshow-container{
-        width: 380px;
-        height: 380px;
-        margin: 0 auto;
-        margin-bottom: 50px;
+    .main-sec1 > ul > li{
+        height: 100px;
     }
-    .mySlidesA{
-        width: 380px;
-        height: 380px;
+    .main-sec1 > ul > li > div{
+        display: none;
     }
-    .mySlidesA img{
-        width: 380px;
-        height: 380px;
+    .main-sec1 > ul > li > h3{
+        font-size: 2.4vw;
+        font-weight: 300;
     }
+    .main-sec1 > ul > li > p{
+        font-size: 2vw;
+        font-weight: 300;
+    }
+
+
     .main-sec3-pic > div > img{
         width: 380px;
         height: 380px;
-        margin : 5px;
+        margin : 10px;
     }
+
+    /* main-sec4의 그림크기조절 시작*/
     .swiper{
-        width: 360px;
-        height: 360px;
+        width: 30vw;
+        height: 30vw;
+        min-width: 380px;
+        min-height: 380px;
     }
     .swiper-slide img{
-        width: 280px;
-        height: 280px;
+        width: 25vw;
+        height: 25vw;
+        min-width: 320px;
+        min-height: 320px;
     }
+    /* main-sec4의 그림크기조절 끝*/ 
+
     .main-sec5-pic{
         display: flex;
         flex-direction: column;
@@ -832,91 +442,39 @@ footer{
     }
 
     .main-sec6 > h3{
-        font-size: 25px;
         margin: 30px 0;
     }
     .main-sec6 > div> h4{
-        font-size: 20px;
         margin: 10px 0 10px 5px;
     }
     .main-sec6 p{
-        font-size: 16px;
         margin-left: 5px;
-    }
-
-    .table1{
-        display: none;
-    }
-    .table2{
-        display: block;
-    }
-
-    .footer h5{
-        font-size: 16px;
-    }
-    .footer p{
-        font-size: 12px;
-    }
-    .footer span{
-        font-size: 12px;
-    }
-    .footer a{
-        font-size: 12px;
     }
 }
 
 /* (360 / 390 / 428 /  683) */
 @media(max-width:390px){
-    .body{
-        width: 100vw;
-    }
-    .container{
-        width: 389px;
-    }
-    .headerh1{
-        font-size: 16px;
-    }
-    .header p{
-        font-size: 12px;
-    }
-    .onoffbut{
-        width: 100px;
-        justify-content: center;
-        text-align: center;
-    }
-    .main-sec1 > ul > li{
-        width: 125px;
-        height: 150px;
-    }
-    .main-container > h1{
-        font-size: 24px;
-        padding-top: 100px;
-        margin-bottom: 20px;
-    }
-    .main-container > h3{
-        font-size: 14px;
-    }
-    .main-container > h2{
-        font-size: 24px;
-    }
-    .mySlidesA img{
-        width: 320px;
-        height: 320px;
-        margin-left: 10px;
-    }
+
     .main-sec3-pic > div > img{
         width: 320px;
         height: 320px;
         margin : 10px;
     }
+    /* main-sec4의 그림크기조절 시작*/
     .swiper{
-        width: 320px;
-        height: 320px;
+        width: 30vw;
+        height: 30vw;
+        min-width: 350px;
+        min-height: 350px;
     }
     .swiper-slide img{
-        width: 250px;
-        height: 250px;
+        width: 25vw;
+        height: 25vw;
+        min-width: 300px;
+        min-height: 300px;
     }
+    /* main-sec4의 그림크기조절 끝*/ 
+
     .main-sec5-pic > img{
         width: 320px;
         height:320px;
@@ -943,35 +501,20 @@ footer{
 
 /* (360 / 390 / 428 /  683) */
 @media(max-width:360px){
-    .body{
-        width: 100vw;
-    }
-    .container{
-        width: 359px;
-    }
-    .headerh1{
-        font-size: 16px;
-    }
-    .onoffbut{
-        width: 100px;
-        justify-content: center;
-        text-align: center;
-    }
-    .business{
-        left: -5%;
-        top: 110%;
-        width: 330px;
-    }
-    .main-sec1 > ul > li{
-        width: 115px;
-        height: 150px;
-    }
-    .phone:after{
-        left: -30%;
-        top: 120%;
-        width: 230px;
-        height: 60px;
-    }
+        /* main-sec4의 그림크기조절 시작*/
+        .swiper{
+            width: 30vw;
+            height: 30vw;
+            min-width: 350px;
+            min-height: 350px;
+        }
+        .swiper-slide img{
+            width: 25vw;
+            height: 25vw;
+            min-width: 300px;
+            min-height: 300px;
+        }
+        /* main-sec4의 그림크기조절 끝*/ 
     .table2{
         width: 320px;
         margin: 0;

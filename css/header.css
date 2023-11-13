@@ -1,0 +1,235 @@
+/* 헤더부분시작 */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 60px;
+    margin: 0 auto;
+    z-index: 998;
+}
+.header > a, .lastheader, .lastheader > ul{
+    display: flex;
+}
+
+.header > a{
+    width: 180px;
+    height: 50px;
+    border: 1px solid #fee500;
+    border-radius: 10px;
+}
+.header > a > div:nth-of-type(1){
+    padding: 5px 0 5px 8px;
+    width: 130px;
+}
+.phoneicon{
+    background: url('../icons/phone.svg') no-repeat center / cover;
+    width: 50px;
+    height: 50px;
+    background-color: #fee500;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.lastheader{
+    width: calc(100%-400px);
+    /* 400px = 전화180px + 769폭에서의 제목의 폭200px*/
+}
+.lastheader > ul{
+    height: 60px;
+}
+.lastheader > ul > li{
+    line-height: 90px;
+}
+.lastheader > ul > li+li{
+    margin-left: 20px;
+}
+.lastheader > ul > li:nth-of-type(2) > ol{
+    transition: 0.5s;
+}
+.lastheader > ul:hover > li:nth-of-type(2) > ol{
+    display: block;
+}
+.lastheader > ul > li > a > p{
+    color: #858585;
+    transition: 0.3s;
+}
+.lastheader > ul > li:hover > a > p{
+    color: white;
+}
+.lastheader > ul:hover > li:nth-of-type(2){
+    cursor: pointer;
+}
+.submenu{
+    position: relative;
+}
+.submenu > ol{
+    display: none;
+    position: absolute;
+    padding-top: 10px;
+    left: -50%;
+    top: 100%;
+}
+.submenu > ol > li{
+    width: 150px;
+    height: 40px;
+    color: #858585;
+    text-align: center;
+    background-color: black;
+    border-bottom: 1px solid white;
+    border-radius: 0 0 10px 0;
+    padding: 5px;
+    font-size: 16px;
+}
+.submenu > ol > li+li{
+    margin-top: 5px;
+}
+.submenu > ol > li:hover{
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+/* 768이하에서 나오는 햄버거매뉴관련 시작*/
+.littleBox > div{
+    display: none;
+    border: 3px solid #858585;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.littleBox > div:after{
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid #858585;
+    border-top: 3px solid #858585;
+    width: 20px;
+    height: 15px;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%,-3px);
+}
+.littleBox > div:before{
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid #858585;
+    width: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-3px);
+}
+.boxlist{
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 120%;
+    width: 120px;
+    background-color: black;
+    padding: 5px;
+    z-index: 999;
+}
+.boxlist > li{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 35px;
+    background-color: black;
+    border-bottom: 1px solid white;
+    border-radius: 0 0 10px 0;
+    cursor: pointer;
+}
+.boxlist > li+li{
+    margin-top: 5px;
+}
+/* 768이하에서 나오는 햄버거매뉴관련 끝*/
+.gotop > div:first-of-type{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    z-index: 999;
+}
+.gotop > div:first-of-type > div{
+    background: url('../icons/gototop.svg') no-repeat center / cover;
+    width: 30px;
+    height: 30px;
+}
+.gotop > div > p{
+    font-size: 20px;
+}
+.make{
+    position: fixed;
+    right: 68px;
+    bottom: 20px;
+    width: 120px;
+    height: 50px;
+    border: 5px dashed red;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 999;
+}
+/* 헤더부분 끝 */
+
+
+/* (360 / 390 / 428 /  768) */
+@media(max-width:768px){  
+    .container{
+        width: 100%;
+    }
+    .header > a{
+        margin-left: 20px;
+    }
+    .header > div > h4{
+        font-size: 3.5vw;
+    }
+    .lastheader > ul{
+        display: none;
+    }
+    .littleBox > div{
+        display: block;
+    }
+}
+
+@media(max-width:428px){
+    .header > div > h4{
+        line-height: 25px;
+        text-align: center;
+        font-size: 4vw;
+    }
+}
+
+/* (360 / 390 / 428 /  683) */
+@media(max-width:390px){
+    .header > div > h4{
+        font-size: 3.5vw;
+    }
+}
+
+/* (360 / 390 / 428 /  683) */
+@media(max-width:360px){
+    .header > div > h4{
+        font-size: 3.3vw;
+    }
+}

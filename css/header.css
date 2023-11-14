@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0);
     height: 60px;
@@ -37,10 +38,9 @@
     /* 400px = 전화180px + 769폭에서의 제목의 폭200px*/
 }
 .lastheader > ul{
+    display: flex;
+    align-items: end;
     height: 60px;
-}
-.lastheader > ul > li{
-    line-height: 90px;
 }
 .lastheader > ul > li+li{
     margin-left: 20px;
@@ -50,6 +50,7 @@
 }
 .lastheader > ul:hover > li:nth-of-type(2) > ol{
     display: block;
+
 }
 .lastheader > ul > li > a > p{
     color: #858585;
@@ -77,8 +78,7 @@
     color: #858585;
     text-align: center;
     background-color: black;
-    border-bottom: 1px solid white;
-    border-radius: 0 0 10px 0;
+    border-bottom: 1px solid #858585;
     padding: 5px;
     font-size: 16px;
 }
@@ -87,6 +87,7 @@
 }
 .submenu > ol > li:hover{
     color: white;
+    border-bottom: 1px solid white;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -140,55 +141,40 @@
     height: 35px;
     background-color: black;
     border-bottom: 1px solid white;
-    border-radius: 0 0 10px 0;
     cursor: pointer;
 }
 .boxlist > li+li{
     margin-top: 5px;
 }
 /* 768이하에서 나오는 햄버거매뉴관련 끝*/
-.gotop > div:first-of-type{
+.gotop > div{
     position: fixed;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     right: 20px;
     bottom: 20px;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: black;
+    border: 1px solid #fee500;
+    cursor: pointer;
+    z-index: 999;
+}
+.gotop > div > div:last-of-type{
+    background: url('../icons/gototop.svg') no-repeat center / cover;
+    border-radius: 10px;
+    background-color: #fee500;
     width: 50px;
     height: 50px;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: white;
-    border: 2px solid black;
-    cursor: pointer;
-    z-index: 999;
-}
-.gotop > div:first-of-type > div{
-    background: url('../icons/gototop.svg') no-repeat center / cover;
-    width: 30px;
-    height: 30px;
-}
-.gotop > div > p{
-    font-size: 20px;
 }
 .make{
-    position: fixed;
-    right: 68px;
-    bottom: 20px;
-    width: 120px;
-    height: 50px;
-    border: 5px dashed red;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
     font-size: 14px;
+    padding-left: 8px;
     font-weight: 900;
-    line-height: 40px;
+    line-height: 50px;
     text-align: center;
     cursor: pointer;
-    z-index: 999;
 }
 /* 헤더부분 끝 */
 

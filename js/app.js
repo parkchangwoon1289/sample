@@ -30,6 +30,11 @@ boxbut33.addEventListener("click", function(){
 // 리틀박스 메뉴 클릭시 리틀박스 사라지게 하는 js
 
 
+
+
+
+
+
 // 자동 사진 넘김
 var slideIndexA = 0;
     showSlidesA();
@@ -50,29 +55,54 @@ var slideIndexA = 0;
         setTimeout(showSlidesA, 2000); // 2초마다 이미지가 체인지
     }
 // 자동 사진 넘김
+// 자동 사진 넘김
+var slideIndexB = 0;
+    showSlidesB();
+
+    function showSlidesB() {
+        var i;
+        var slidesB = document.getElementsByClassName("mySlidesB");
+       
+        for (i = 0; i < slidesB.length; i++) {
+            slidesB[i].style.display = "none"
+        }
+        slideIndexB++;
+        if (slideIndexB > slidesB.length) {
+            slideIndexB = 1
+        }
+        slidesB[slideIndexB - 1].style.display = "block";
+    
+        setTimeout(showSlidesB, 2000); // 2초마다 이미지가 체인지
+    }
+// 자동 사진 넘김
+// 자동 사진 넘김
+var slideIndexC = 0;
+    showSlidesC();
+
+    function showSlidesC() {
+        var i;
+        var slidesC = document.getElementsByClassName("mySlidesC");
+       
+        for (i = 0; i < slidesC.length; i++) {
+            slidesC[i].style.display = "none"
+        }
+        slideIndexC++;
+        if (slideIndexC > slidesC.length) {
+            slideIndexC = 1
+        }
+        slidesC[slideIndexC - 1].style.display = "block";
+    
+        setTimeout(showSlidesC, 2000); // 2초마다 이미지가 체인지
+    }
+// 자동 사진 넘김
 
 
-//swiper 관련
-const swiper = new Swiper(".my-swiper", {
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-        pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
-        },
-    })
-//swiper 관련
 
 // 글자들의 자동 색 변경
 const changeA = document.querySelector(".header > a > div > h5");
 const changeB = document.querySelector(".main-sec1>h2:last-of-type");
 const changeC = document.querySelector(".main-sec1>h2:last-of-type>a");
-const changeE = document.querySelector(".footer>div:last-of-type>a:last-of-type");
+const changeE = document.querySelector(".footer>div > a:last-of-type");
 
 changeA.classList.toggle("active5");
 changeB.classList.toggle("active4");
@@ -92,12 +122,15 @@ setInterval(()=>{
 const but1 = document.querySelector(".button1");
 
 const but3 = document.querySelector(".button3");
-const buttop = document.querySelector(".gotop");
+const buttop = document.querySelector(".gotop > div > div");
 
 const subbut1 = document.querySelector(".submenu1");
 const subbut2 = document.querySelector(".submenu2");
 const subbut3 = document.querySelector(".submenu3");
 const subbut4 = document.querySelector(".submenu4");
+const subbut5 = document.querySelector(".submenu5");
+const subbut6 = document.querySelector(".submenu6");
+
 
 const littlebut1 = document.querySelector(".boxlist-1");
 const littlebut2 = document.querySelector(".boxlist-2");
@@ -106,17 +139,19 @@ const littlebut3 = document.querySelector(".boxlist-3");
 
 const but11 = document.querySelector(".main-sec1");
 
-const but33 = document.querySelector(".main-sec6");
-const topp = document.querySelector(".header");
+const but33 = document.querySelector(".main-sec8");
 
 const subbut11 = document.querySelector(".main-sec2");
 const subbut22 = document.querySelector(".main-sec3");
 const subbut33 = document.querySelector(".main-sec4");
 const subbut44 = document.querySelector(".main-sec5");
+const subbut55 = document.querySelector(".main-sec6");
+const subbut66 = document.querySelector(".main-sec7");
 
-const littlebut11 = document.querySelector(".header > a");
-const littlebut22 = document.querySelector(".main-sec2 > h1");
-const littlebut33 = document.querySelector(".main-sec6 > h3");
+
+const littlebut11 = document.querySelector(".header");
+const littlebut22 = document.querySelector(".main-sec2");
+const littlebut33 = document.querySelector(".main-sec8");
 
 
 
@@ -131,7 +166,7 @@ but3.addEventListener("click", (event) => {
 })
 buttop.addEventListener("click", (event) => {
     event.preventDefault()
-    window.scrollTo({ top: topp.offsetTop, behavior: "smooth" })
+    window.scrollTo({ top: but11.offsetTop, behavior: "smooth" })
 })
 
 
@@ -150,6 +185,14 @@ subbut3.addEventListener("click", (event) => {
 subbut4.addEventListener("click", (event) => {
     event.preventDefault()
     window.scrollTo({ top: subbut44.offsetTop, behavior: "smooth" })
+})
+subbut5.addEventListener("click", (event) => {
+    event.preventDefault()
+    window.scrollTo({ top: subbut55.offsetTop, behavior: "smooth" })
+})
+subbut6.addEventListener("click", (event) => {
+    event.preventDefault()
+    window.scrollTo({ top: subbut66.offsetTop, behavior: "smooth" })
 })
 
 

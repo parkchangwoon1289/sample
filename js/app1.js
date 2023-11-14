@@ -1,21 +1,10 @@
-// 명함 클릭시 명함 나오게 하는 js
-const onoffbut = document.querySelector(".onoffbut");
-const business1 = document.querySelector(".business");
-
-onoffbut.addEventListener("click", function(){
-    onoffbut.classList.toggle("active1"),
-    business1.classList.toggle("active2")
-})
-// 명함 클릭시 명함 나오게 하는 js
-
-
 // 리틀박스 클릭시 하위메뉴박스 토글로 나오게 하는 js
 const boxbut = document.querySelector(".littleBox>div");
 const boxlist = document.querySelector(".boxlist");
 
 boxbut.addEventListener("click", function(){
-    boxbut.classList.toggle("active11"),
-    boxlist.classList.toggle("active4")
+    boxbut.classList.toggle("active1"),
+    boxlist.classList.toggle("active2")
 })
 // 리틀박스 클릭시  하위메뉴박스 토글로 나오게 하는 js
 
@@ -27,12 +16,12 @@ const boxbut22 = document.querySelector(".boxlist-2");
 const boxlist00 = document.querySelector(".boxlist");
 
 boxbut11.addEventListener("click", function(){
-    boxlist00.classList.remove("active4"),
-    boxbut.classList.toggle("active11")
+    boxlist00.classList.remove("active2"),
+    boxbut.classList.toggle("active1")
 })
 boxbut22.addEventListener("click", function(){
-    boxlist00.classList.remove("active4"),
-    boxbut.classList.toggle("active11")
+    boxlist00.classList.remove("active2"),
+    boxbut.classList.toggle("active1")
 })
 // 리틀박스 메뉴 클릭시 리틀박스 사라지게 하는 js
 
@@ -101,7 +90,7 @@ setInterval(()=>{
 // 웹페이지에서 버튼 클릭시 해당 페이지로 자동으로 내려가기
 const but1 = document.querySelector(".button1");
 const but2 = document.querySelector(".button2");
-const buttop = document.querySelector(".gotop");
+const buttop = document.querySelector(".gotop>div>div");
 
 const littlebut1 = document.querySelector(".boxlist-1");
 const littlebut2 = document.querySelector(".boxlist-2");

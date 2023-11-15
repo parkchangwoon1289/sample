@@ -1,3 +1,10 @@
+/* 🔻헤더의 페이지마다 다른부분 시작🔻*/
+.gotop > div > a:last-of-type{
+    background-color: #fee500;
+    color: black;
+}
+/* 🔺헤더의 페이지마다 다른부분 끝🔺*/
+
 /* 🔻main의 공통부분 시작🔻*/
 .main-container{
     display: flex;

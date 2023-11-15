@@ -1,6 +1,9 @@
-.gotop > div > a{
-    margin-left: 10px;
+/* 🔻헤더의 페이지마다 다른부분 시작🔻*/
+.gotop > div > a:first-of-type{
+    background-color: #fee500;
+    color: black;
 }
+/* 🔺헤더의 페이지마다 다른부분 끝🔺*/
 
 /* main의 공통부분 시작*/
 .mainAll{
@@ -105,7 +108,7 @@
     border: 2px solid #fee500;
     border-radius: 10px;
 }
-.main-sec1 > div:nth-of-type(5) > div > img{
+.main-sec1 > div:nth-of-type(6) > div > img{
     border: 2px solid #fee500;
     border-radius: 10px;
 }
@@ -115,7 +118,29 @@
     justify-content: center;
     align-items: center;
 }
-
+.main-sec1 > div:nth-of-type(5) > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.manypic{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.p{
+    margin-top: 30px;
+}
 /* active 관련 시작 */
 .active1{
     background-color: #fee500;
@@ -140,7 +165,6 @@
 /* 에시의 효과 관련 */
 .main-sec1 > div:last-of-type > p{
     display: block;
-
     font-size: 15px;
     margin: 50px;
 }

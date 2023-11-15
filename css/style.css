@@ -1,134 +1,41 @@
-/* main의 공통부분 시작*/
+/* 🔻main의 공통부분 시작🔻*/
 .main-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-/* main의 공통부분 끝*/
 .mainAll{
     border-bottom: 1px solid white;
     padding-bottom: 50px;
 }
-/* main section 1번 CSS 시작*/
-.main-sec1 > img{
-    width: 50vw;
-    height: 50vw;
-    min-width: 360px;
-    min-height: 360px;
-    max-width: 450px;
-    max-height: 450px;
-    border: 1px solid white;
-    border-radius: 20px;
-    margin: 0 auto;
+.container h3:last-of-type{
+    padding-bottom: 15px;
 }
-/* main section 1번 CSS 끝*/
+/* 🔺main의 공통부분 끝🔺*/
 
-/* main section 2번 css 시작 */
-.main-sec-pic{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.main-sec-pic > div > img{
-    width: 50vw;
-    height: 50vw;
-    min-width: 360px;
-    min-height: 360px;
-    max-width: 450px;
-    max-height: 450px;
-    border: 1px solid white;
-    border-radius: 20px;
-}
-/* main section 2번 CSS 끝*/
-
-/* main section 5,6,8번 css 시작 */
-.mySlidesA img{
-    width: 60vw;
-    height: 55vw;
-    min-width: 360px;
-    min-height: 360px;
-    max-width: 450px;
-    max-height: 450px;
-    border: 1px solid white;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-.mySlidesB img{
-    width: 60vw;
-    height: 55vw;
-    min-width: 360px;
-    min-height: 360px;
-    max-width: 500px;
-    max-height: 500px;
-    border: 1px solid white;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-.mySlidesC img{
-    width: 60vw;
-    height: 55vw;
-    min-width: 360px;
-    min-height: 360px;
-    max-width: 500px;
-    max-height: 500px;
-    border: 1px solid white;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-/* main section 5,6,8번 CSS 끝*/
-
-/* active 관련 시작 */
-.active1{
-    background-color: #fee500;
-    transition: 0.3s;
-}
-.active2{
-    display: block;
-}
-.active3{
-    display: none;
-}
-.active4{
-    color: red;
-}
-.active5{
-    color: #17b75e;
-}
-/* active 관련 끝 */
-
-/* 자동사진 넘김관련 */
-.Slidesbackground {
-    margin: 0;
-    padding: 0;
-}
+/* 🔻[JavaScript연관] 자동사진 넘김관련 시작🔻 */
 .slideshow-image{
-    border-radius:3%;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 .mySlidesA, .mySlidesB, .mySlidesC{
-    border-radius:3%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
 }
-
-.slideshow-container {
+.slideshow-container{
     display: flex;
     justify-content: center;
     position: relative;
     margin: auto;
 }
-.fade {
+.fade{
     animation-name: fade;
     animation-duration: 1.5s;
 }
-@keyframes fade {
+@keyframes fade{
     from {
         opacity: .4
     }
@@ -136,9 +43,9 @@
         opacity: 1
     }
 }
-/* 자동사진 넘김관련 */
+/* 🔺[JavaScript연관] 자동사진 넘김관련 끝 🔺*/
 
-/* swiper사이트에서 받아온 기능 */
+/* 🔻[JavaScript연관] swiper사이트에서 붙여넣기 시작🔻 */
 .my-swiper{
     width: 50%;
     height: 100vh;
@@ -149,15 +56,6 @@
     align-items: center;
     font-size: 8vw;
 }
-.swiper{
-    width: 30vw;
-    height: 30vw;
-    min-width: 450px;
-    min-height: 450px;
-    border: 1mm solid white;
-    margin: 30px auto 30px;
-    border-radius: 20px;
-}
 .swiper-slide{
     text-align: center;
     font-size: 18px;
@@ -165,14 +63,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.swiper-slide img{
-    display: block;
-    width: 25vw;
-    height: 25vw;
-    min-width: 380px;
-    min-height: 380px;
-    object-fit: cover;
 }
 .swiper-pagination-bullet{
     width: 20px;
@@ -193,86 +83,188 @@
     color: red;
     font-weight: 900;
 }
-/* swiper사이트에서 받아온 기능 */
+/* 🔺[JavaScript연관] swiper사이트에서 붙여넣기 끝🔺 */
+
+/* 🔻[JavaScript연관] active 관련 시작 🔻*/
+.active1{
+    background-color: #fee500;
+    transition: 0.3s;
+}
+.active2{
+    display: block;
+}
+.active3{
+    display: none;
+}
+.active4{
+    color: red;
+}
+.active5{
+    color: #17b75e;
+}
+/* 🔺[JavaScript연관] active 관련 끝🔺 */
 
 
-/* (360 / 390 / 428 /  768) */
+
+
+
+
+
+/* 🟡이미지 관련 공통 설정 시작🟡 */
+/* 🔻main 전체 공통 - 한장씩,FLEX WRAP관련 사진설정 시작🔻 */
+/* 🔻자동넘김 사진 설정 시작(페이지 수마다 A,B,C맞춰줘야함)🔻 */
+/* ❗❗CSS뿐만 아니라 HTML과 JavaScript에서도 A,B,C가야함❗❗ */
+.main-sec-pic{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.main-sec1 > img, .main-sec-pic > div > img, .mySlidesA img, .mySlidesB img, .mySlidesC img{
+    width: 60vw;
+    height: 60vw;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 450px;
+    max-height: 450px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
 @media(max-width:768px){  
-    .mainAll{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-    }
     .main-container{
         display: flex;
         justify-content: start;
         align-items: start;
+        padding-left: 10px;
     }
-    /* main-sec4의 그림크기조절 시작*/
-    .swiper{
-        width: 30vw;
-        height: 30vw;
-        min-width: 400px;
-        min-height: 400px;
+    .main-sec-pic, .slideshow-container{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        padding-left: 10px;
     }
-    .swiper-slide img{
-        width: 25vw;
-        height: 25vw;
-        min-width: 320px;
-        min-height: 320px;
+    .main-sec1 > img, .main-sec-pic > div > img, .mySlidesA img, .mySlidesB img, .mySlidesC img{
+        width: 90vw;
+        height: 90vw;
+        min-width: 280px;
+        min-height: 280px;
+        max-width: 550px;
+        max-height: 550px;
+        border: 1px solid white;
+        border-radius: 10px;
     }
-    /* main-sec4의 그림크기조절 끝*/ 
+}
+/* 🔺main 전체 공통 - 한장씩,FLEX WRAP관련 사진설정 끝🔺 */
+/* 🔺자동넘김 사진 설정 끝(페이지마다 A,B,C맞춰줘야함)🔺 */
+
+/* 🔻swiper 사진 설정 시작(페이지 수마다 A,B,C필요없음)🔻 */
+/* ❗❗CSS뿐만 아니라 HTML과 JavaScript에서도 A,B,C필요없음❗❗ */
+/* .swiper{
+    width: 30vw;
+    height: 30vw;
+    min-width: 450px;
+    min-height: 450px;
+    border: 1mm solid white;
+    margin: 30px auto 30px;
+    border-radius: 10px;
+}
+.swiper-slide img{
+    display: block;
+    width: 25vw;
+    height: 25vw;
+    min-width: 380px;
+    min-height: 380px;
+    object-fit: cover;
+} */
+
+/* 🔺swiper 사진 설정 시작(페이지 수마다 A,B,C필요없음)🔺 */
+/* 🟡이미지 관련 공통 설정 끝🟡 */
+
+
+
+/* 🟡SECTION 마다 이미지 설정 시작🟡 */
+.main-sec1 > img{
+    margin: 15px 0;
+}
+/* 🟡SECTION 마다 이미지 설정 시작🟡 */
+
+
+
+
+
+
+
+/* 🟡SECTION 마다 폰트설정 시작 -[h1, h2, h3,]🟡 */
+/* ❗❗CSS는 순차적용이니 공통먼저 설정후 아래에 SECTION별 변경❗❗ */
+main h1{
+    font-size: calc(26px + 1.4vw);
+    font-weight: 500;
+    padding-top: 80px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+main h2, main a{
+    font-size: calc(18px + 1.5vw);
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #858585;
+}
+main h3{
+    font-size: calc(16px + 0.9vw);
+    font-weight: 300;
+    margin-top: 8px;
+    color: #f5f5f7;
 }
 
-@media(max-width:620px){
-    .table1{
-        display: none;
+/* 🟡SECTION 마다 폰트설정 끝 -[h1, h2, h3,]🟡 */
+
+/* (360 / 390 / 428 /  768) */
+@media(max-width:768px){  
+    main h1{
+        font-size: calc(20px + 1.4vw);
+        font-weight: 400;
     }
-    .table2{
-        display: block;
+    main h3{
+        font-size: calc(12px + 0.9vw);
+        font-weight: 200;
     }
 }
 
 @media(max-width:428px){
-
+    main h1{
+        font-size: calc(20px + 1.4vw);
+        font-weight: 300;
+    }
+    main h3{
+        font-size: calc(12px + 0.9vw);
+        font-weight: 200;
+    }
 }
    
 
 /* (360 / 390 / 428 /  683) */
 @media(max-width:390px){
+    main h1{
+        font-size: calc(16px + 1.4vw);
+        font-weight: 300;
+    }
+    main h3{
+        font-size: calc(11px + 0.8vw);
+        font-weight: 200;
+    }
 
-    /* main-sec4의 그림크기조절 시작*/
-    .swiper{
-        width: 30vw;
-        height: 30vw;
-        min-width: 350px;
-        min-height: 350px;
-    }
-    .swiper-slide img{
-        width: 25vw;
-        height: 25vw;
-        min-width: 300px;
-        min-height: 300px;
-    }
-    /* main-sec4의 그림크기조절 끝*/ 
 }
 
 /* (360 / 390 / 428 /  683) */
 @media(max-width:360px){
-        /* main-sec4의 그림크기조절 시작*/
-        .swiper{
-            width: 30vw;
-            height: 30vw;
-            min-width: 350px;
-            min-height: 350px;
-        }
-        .swiper-slide img{
-            width: 25vw;
-            height: 25vw;
-            min-width: 300px;
-            min-height: 300px;
-        }
-        /* main-sec4의 그림크기조절 끝*/ 
+    main h1{
+        font-size: calc(15px + 1.4vw);
+        font-weight: 200;
+    }
+    main h3{
+        font-size: calc(10px + 0.8vw);
+        font-weight: 100;
+    }
 
 }

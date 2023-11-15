@@ -26,63 +26,60 @@ boxbut22.addEventListener("click", function(){
 // 리틀박스 메뉴 클릭시 리틀박스 사라지게 하는 js
 
 
-// // 자동 사진 넘김
-// var slideIndexA = 0;
-//     showSlidesA();
+// 자동 사진 넘김
+var slideIndexA = 0;
+    showSlidesA();
 
-//     function showSlidesA() {
-//         var i;
-//         var slidesA = document.getElementsByClassName("mySlidesA");
+    function showSlidesA() {
+        var i;
+        var slidesA = document.getElementsByClassName("mySlidesA");
        
-//         for (i = 0; i < slidesA.length; i++) {
-//             slidesA[i].style.display = "none"
-//         }
-//         slideIndexA++;
-//         if (slideIndexA > slidesA.length) {
-//             slideIndexA = 1
-//         }
-//         slidesA[slideIndexA - 1].style.display = "block";
+        for (i = 0; i < slidesA.length; i++) {
+            slidesA[i].style.display = "none"
+        }
+        slideIndexA++;
+        if (slideIndexA > slidesA.length) {
+            slideIndexA = 1
+        }
+        slidesA[slideIndexA - 1].style.display = "block";
     
-//         setTimeout(showSlidesA, 2000); // 2초마다 이미지가 체인지
-//     }
-// // 자동 사진 넘김
+        setTimeout(showSlidesA, 2000); // 2초마다 이미지가 체인지
+    }
+// 자동 사진 넘김
 
 
-// //swiper 관련
-// const swiper = new Swiper(".my-swiper", {
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-//         pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//         renderBullet: function (index, className) {
-//             return '<span class="' + className + '">' + (index + 1) + "</span>";
-//         },
-//         },
-//     })
-// //swiper 관련
+//swiper 관련
+const swiper = new Swiper(".my-swiper", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+        },
+    })
+//swiper 관련
 
 // 글자들의 자동 색 변경
 const changeA = document.querySelector(".ex1");
 const changeB = document.querySelector(".ex2");
 const changeC = document.querySelector(".ex3");
 const changeD = document.querySelector(".ex4");
-const changeE = document.querySelector(".ex5");
 
 changeA.classList.toggle("act1");
 changeB.classList.toggle("act2");
 changeC.classList.toggle("act3");
 changeD.classList.toggle("act4");
-changeE.classList.toggle("act5");
 
 setInterval(()=>{
     changeA.classList.toggle("act1"),
     changeB.classList.toggle("act2"),
     changeC.classList.toggle("act3"),
-    changeD.classList.toggle("act4"),
-    changeE.classList.toggle("act5")
+    changeD.classList.toggle("act4")
 }, 1000)
 // 글자들의 자동 색 변경
 

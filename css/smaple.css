@@ -218,7 +218,7 @@ main h1{
     color: #fff;
 }
 main h2, main a{
-    font-size: calc(18px + 1.5vw);
+    font-size: calc(16px + 1.2vw);
     font-weight: 400;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -231,6 +231,7 @@ main h3{
     color: #f5f5f7;
 }
 .main-sec5 > h1{
+    font-size: calc(22px + 1.3vw);
     padding-top: 30px;
 }
 
@@ -264,9 +265,17 @@ main h3{
         font-size: calc(20px + 1.4vw);
         font-weight: 400;
     }
+    main h2, main a{
+        font-size: calc(16px + 1.2vw);
+        font-weight: 300;
+    }
     main h3{
         font-size: calc(12px + 0.9vw);
         font-weight: 200;
+    }
+    .main-sec5 > h1{
+        font-size: calc(20px + 1.2vw);
+        padding-top: 30px;
     }
 }
 
@@ -275,12 +284,20 @@ main h3{
 
 @media(max-width:428px){
     main h1{
-        font-size: calc(20px + 1.4vw);
+        font-size: calc(18px + 1.3vw);
+        font-weight: 300;
+    }
+    main h2, main a{
+        font-size: calc(16px + 1.0vw);
         font-weight: 300;
     }
     main h3{
-        font-size: calc(12px + 0.9vw);
+        font-size: calc(12px + 0.8vw);
         font-weight: 200;
+    }
+    .main-sec5 > h1{
+        font-size: calc(16px + 0.7vw);
+        padding-top: 30px;
     }
 }
    
@@ -291,9 +308,17 @@ main h3{
         font-size: calc(16px + 1.4vw);
         font-weight: 300;
     }
+    main h2, main a{
+        font-size: calc(14px + 0.8vw);
+        font-weight: 300;
+    }
     main h3{
         font-size: calc(11px + 0.8vw);
         font-weight: 200;
+    }
+    .main-sec5 > h1{
+        font-size: calc(14px + 0.7vw);
+        padding-top: 30px;
     }
     .table2{
         width: 330px;
@@ -316,9 +341,17 @@ main h3{
         font-size: calc(15px + 1.4vw);
         font-weight: 200;
     }
+    main h2, main a{
+        font-size: calc(13px + 0.7vw);
+        font-weight: 200;
+    }
     main h3{
         font-size: calc(10px + 0.8vw);
         font-weight: 100;
+    }
+    .main-sec5 > h1{
+        font-size: calc(13px + 0.7vw);
+        padding-top: 30px;
     }
     .table2{
         width: 320px;
@@ -332,5 +365,4 @@ main h3{
         font-size: 16px;
         padding: 5px;
     }
-
 }

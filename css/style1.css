@@ -3,6 +3,9 @@
     background-color: #fee500;
     color: black;
 }
+.p-center{
+    text-align: center;
+}
 /* 🔺헤더의 페이지마다 다른부분 끝🔺*/
 
 /* main의 공통부분 시작*/
